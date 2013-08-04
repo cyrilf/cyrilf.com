@@ -1,0 +1,112 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding-top: 0;
+  color: #fafafa;
+  line-height: 1.231;
+}
+@media (max-width: 767px) {
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.content {
+  padding-bottom: 7%;
+  padding-top: 7%;
+}
+/**
+ * Header
+ */
+.header {
+  background: #ecf0f1;
+}
+.header h1,
+.header h2,
+.header h3 {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.2;
+}
+.header .main-title {
+  font-size: 50px;
+  min-height: 70px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 0;
+}
+.header .triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 35px 5px 35px;
+  border-color: rgba(255, 255, 255, 0.9) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+.header hr.white-line {
+  border-bottom: white solid .5px;
+  width: 17%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.header .sub-title {
+  font-size: 20px;
+}
+/**
+ * Navigation Header
+ */
+.navbar .container {
+  width: 453px;
+}
+.navbar .navbar-brand {
+  display: none;
+  color: #526476;
+}
+.navbar .navbar-toggle .icon-bar {
+  background-color: #526476;
+}
+.navbar .nav > li > a {
+  font-size: 23px;
+}
+.navbar .nav > li.active > a,
+.navbar .nav > li.active > a:hover,
+.navbar .nav > li.active > a:focus {
+  background: none;
+  color: #1abc9c;
+}
+@media (max-width: 767px) {
+  .navbar .navbar-brand {
+    display: block;
+  }
+}
+@media (min-width: 767px) {
+  .navbar .nav > li > a {
+    padding: 29px 20px 27px;
+  }
+}
+/**
+ * First section
+ */
+.intro {
+  background: #c0392b;
+  margin-top: -20px;
+  font-size: 30px;
+}
+.intro .hey {
+  font-size: 42px;
+}
+.intro a {
+  color: inherit;
+}
+.intro ul.who-am-i {
+  list-style: none;
+}
+.intro .intro-left {
+  text-align: left;
+  padding-left: 10%;
+}
+/**
+ * Footer
+ */
+footer {
+  color: #7f8c8d;
+}
