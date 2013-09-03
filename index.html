@@ -14,9 +14,9 @@
   <!-- <link rel="stylesheet" href="css/bootstrap-responsive.min.css"> -->
   <link rel="stylesheet" href="css/bootstrap-glyphicons.css">
   <!-- <link rel="stylesheet" href="css/flat-design.css"> -->
+  <link rel="stylesheet" href="css/caption-hover.css">
   <link rel="stylesheet" href="css/screen.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,700' rel='stylesheet' type='text/css'>
-
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -28,28 +28,30 @@
     <div class="sub-title">A french web developer</div>
   </div>
 
-  <div class="navbar">
-    <div class="container">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+  <div class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">Menu</a>
-      <div class="nav-collapse collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-nav-centered">
+        <li><a href="#intro-link">Intro</a></li>
+        <li><a href="#intro-projects">Projects</a></li>
+        <li><a href="#intro-skills">Skills</a></li>
+        <li><a href="#intro-contact">Contact</a></li>
+      </ul>
     </div>
   </div>
 
-  <div class="content intro full-width">
+  <section class="content full-width" id="intro">
+    <a id="intro-link"></a>
     <div class="row">
-      <div class="col-6 intro-left">
+      <div class="col-md-6 intro-left">
         <div class="hey">Hey!</div>
         <br>
         <div>Nice to see you there!</div>
@@ -57,50 +59,86 @@
         <div>So you may ask who am I? Here is the answer:
         </div>
         <ul class="who-am-i">
-            <li>Web lover <img src="img/icons/heart.png" alt="heart"/></li>
-            <li><a href="#">Music Addict <img src="img/icons/music.png" alt="music"/></a></li>
-            <li><a href="#">Tech blogger <img src="img/icons/blog.png" alt="blog"/></a></li>
+            <li><a href="http://github.com/cyrilf">Web lover <img src="img/icons/heart.png" alt="heart"/></a></li>
+            <li><a href="http://echomind.tumblr.com">Music Addict <img src="img/icons/music.png" alt="music"/></a></li>
+            <li><a href="http://requiremind.com">Tech blogger <img src="img/icons/blog.png" alt="blog"/></a></li>
           </ul>
       </div>
-      <div class="col-6"></div>
+      <div class="col-md-6 intro-right">
+        <div id="picture-me"></div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container">
+  <div class="separator"></div>
 
-    <!-- Main hero unit for a primary marketing message or call to action -->
-    <div class="hero-unit">
-      <h1>Hello, world!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-    </div>
-
-    <!-- Example row of columns -->
+  <section class="content full-width" id="projects">
+    <a id="intro-projects"></a>
     <div class="row">
-      <div class="span4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-      </div>
-      <div class="span4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-      </div>
-      <div class="span4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn" href="#">View details &raquo;</a></p>
-      </div>
+      <h3 class="section-title">Projects</h3>
+
+      <ul class="grid cs-style-3" id="project-list">
+        <li class="col-xs-1 col-sm-2 col-md-4">
+          <figure>
+            <img src="img/1.jpg" alt="img01">
+            <figcaption>
+              <h3>Camera</h3>
+              <span>Jacob Cummings</span>
+              <a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="col-xs-1 col-sm-2 col-md-4">
+          <figure>
+            <img src="img/2.jpg" alt="img01">
+            <figcaption>
+              <h3>Camera</h3>
+              <span>Jacob Cummings</span>
+              <a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="col-xs-1 col-sm-2 col-md-4">
+          <figure>
+            <img src="img/3.jpg" alt="img01">
+            <figcaption>
+              <h3>Camera</h3>
+              <span>Jacob Cummings</span>
+              <a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="col-xs-1 col-sm-2 col-md-4">
+          <figure>
+            <img src="img/4.jpg" alt="img01">
+            <figcaption>
+              <h3>Camera</h3>
+              <span>Jacob Cummings</span>
+              <a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
     </div>
+  </section>
 
-    <hr>
+  <div class="separator"></div>
 
-    <footer>
-      <p>cyrilf - cyrilf.com</p>
-    </footer>
+  <section class="content full-width" id="skills">
+    <a id="intro-skills"></a>
+    <div class="row">
+      <h3 class="section-title">Skills</h3>
+    </div>
+  </section>
 
-  </div> <!-- /container -->
+  <div class="separator"></div>
+
+  <footer class="content full-width" id="footer">
+    <a id="intro-contact"></a>
+    Social icons go there!!!
+    Github / LinkedIn / Twitter / G+
+    <p>cyrilf - cyrilf.com</p>
+  </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>

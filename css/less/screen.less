@@ -18,6 +18,10 @@ body {
   padding-top: 7%;
 }
 
+.row {
+  margin: 0;
+}
+
 /**
  * Header
  */
@@ -66,17 +70,20 @@ body {
  */
 
 .navbar {
-  .container {
-    width: 453px;
+
+  a {
+    color: #526476;
+  }
+
+  .navbar-nav-centered {
+    margin: 0 auto;
+    width: 439px;
+    float: none;
   }
 
   .navbar-brand {
     display: none;
     color: #526476;
-  }
-
-  .navbar-toggle .icon-bar {
-    background-color: #526476;
   }
 
   .nav > li > a {
@@ -104,14 +111,30 @@ body {
 }
 
 /**
+ * Sections
+ */
+
+section, footer {
+  background: #c0392b;
+  font-size: 30px;
+  position: relative;
+}
+
+.section-title {
+  border: 1px solid white;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  padding: 11px;
+  display: inline-block;
+}
+
+/**
  * First section
  */
 
-.intro {
+#intro {
   background: #c0392b;
   margin-top: -20px;
-
-  font-size: 30px;
 
   .hey {
     font-size: 42px;
@@ -129,7 +152,76 @@ body {
     text-align: left;
     padding-left: 10%;
   }
+
+  .intro-right {
+    #picture-me {
+      background: url('../img/me.jpg');
+      background-size: contain;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 auto;
+
+      -webkit-transition: box-shadow 0.2s;
+      -moz-transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s;
+
+      &:after {
+        top: 0;
+        left: 0;
+        padding: 0;
+        box-shadow: 0 0 0 8px #FFF;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        content: '';
+
+        -webkit-transition: -webkit-transform 0.7s, opacity 0.2s, box-shadow 0.3s;
+        -moz-transition: -moz-transform 0.7s, opacity 0.2s, box-shadow 0.2s;
+        transition: transform 0.7s, opacity 0.2s, box-shadow 0.2s;
+      }
+
+      &:hover {
+        box-shadow: 0 0 0 8px #FFF;
+        &:after {
+          -webkit-transform: scale(1.11);
+          -moz-transform: scale(1.07);
+          -ms-transform: scale(1.07);
+          transform: scale(1.11);
+          box-shadow: 0 0 0 110px #FFF;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
 }
+
+.separator {
+  position: relative;
+  z-index: 2;
+  height: 1px;
+  background-color: #fff;
+}
+
+#projects {
+  z-index: 2;
+  background: #27ae60;
+
+  #project-list {
+    font-size: 15px;
+  }
+}
+
+#skills {
+  background: #2980b9;
+}
+
+#footer {
+  background: #2c3e50;
+}
+
 /**
  * Footer
  */
