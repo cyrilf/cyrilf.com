@@ -39,12 +39,20 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
 }
 body {
   font-family: 'Raleway', sans-serif;
+  color: #2f2c3e;
   text-align: center;
-  color: #fafafa;
   line-height: 1.231;
+}
+body a,
+body a:hover,
+body a:active {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
 }
 @media (max-width: 767px) {
   body {
@@ -68,7 +76,7 @@ body {
  * Header
  */
 .header {
-  background: #ecf0f1;
+  background: #d5d957;
 }
 .header h1,
 .header h2,
@@ -84,6 +92,7 @@ body {
   margin-bottom: 0;
   display: inline-block;
   position: relative;
+  color: #f3efe6;
 }
 .header .main-title:before {
   padding-top: 3px;
@@ -166,7 +175,7 @@ body {
  * Navigation Header
  */
 .navbar a {
-  color: #526476;
+  color: #2f2c3e;
 }
 .navbar .navbar-nav-centered {
   margin: 0 auto;
@@ -183,12 +192,12 @@ body {
 .navbar .nav > li.active > a:hover,
 .navbar .nav > li.active > a:focus {
   background: none;
-  color: #1abc9c;
+  color: #1e1e29;
 }
 @media (max-width: 767px) {
   .navbar .navbar-brand {
     display: block;
-    color: #526476;
+    color: #2f2c3e;
   }
   .navbar .navbar-nav-centered {
     width: 100%;
@@ -202,9 +211,8 @@ body {
 /**
  * Sections
  */
-section,
-footer {
-  background: #c0392b;
+section {
+  background: #f3efe6;
   font-size: 30px;
   position: relative;
 }
@@ -262,19 +270,12 @@ footer {
  * First section
  */
 #intro {
-  color: #1e1e29;
   background: #f3efe6;
   margin-top: -20px;
 }
 #intro .hey {
   font-size: 100px;
   font-family: 'Jenna Sue';
-}
-#intro a {
-  color: inherit;
-}
-#intro ul.who-am-i {
-  list-style: none;
 }
 #intro .intro-left {
   text-align: left;
@@ -285,6 +286,8 @@ footer {
   background-size: cover;
   width: 400px;
   height: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
   border-radius: 50%;
   position: relative;
   -webkit-transition: box-shadow 0.2s;
@@ -316,6 +319,34 @@ footer {
   box-shadow: 0 0 0 110px #353f38;
   opacity: 0.5;
 }
+@media (max-width: 767px) {
+  #intro .intro-right #picture-me {
+    width: 350px;
+    height: 350px;
+  }
+}
+#intro ul.who-am-i {
+  list-style: none;
+  margin: 0 auto;
+  margin-top: 0;
+  padding-left: 9%;
+}
+#intro ul.who-am-i li {
+  float: left;
+  border: 1px solid #5f5f81;
+  border-radius: 5px;
+  padding: 7px;
+  margin-left: 15px;
+  margin-top: 15px;
+  -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+#intro ul.who-am-i li:hover {
+  background-color: #d5d957;
+  color: #f3efe6;
+  border-color: #f3efe6;
+}
 .separator {
   position: relative;
   z-index: 2;
@@ -323,6 +354,7 @@ footer {
   background-color: #f3efe6;
 }
 #projects {
+  color: #f3efe6;
   z-index: 2;
   background: #2f2c3e;
 }
@@ -330,6 +362,7 @@ footer {
   font-size: 15px;
 }
 #skills {
+  color: #f3efe6;
   background: #d5d957;
 }
 /**
@@ -345,16 +378,12 @@ footer {
 }
 #footer #social-links a {
   margin-left: 5%;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
 }
 #footer #social-links a:first-child {
   margin-left: 0;
-}
-#footer #social-links a,
-#footer #social-links a:hover,
-#footer #social-links a:active {
-  text-decoration: none;
-  outline: none;
-  color: inherit;
 }
 #footer #social-links a:hover {
   color: #d5d957;
