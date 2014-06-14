@@ -125,29 +125,6 @@ ul {
 .header .main-title:hover:before {
   max-width: 100%;
 }
-.header .triangle {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 55px 35px 5px 35px;
-  border-color: rgba(255, 255, 255, 0.9) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
-  transition: border-color 0.7s;
-}
-.header .triangle:hover {
-  border-color: #2c3e50 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
-  transition: border-color 0.3s;
-}
-.header hr.white-line {
-  border-bottom: white solid .5px;
-  width: 17%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-.header .sub-title {
-  font-size: 20px;
-}
 .header .logo-container {
   border-radius: 50%;
   position: relative;
@@ -339,9 +316,16 @@ section {
   margin: 0 auto;
   margin-top: 0;
   padding-left: 9%;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  #intro ul.who-am-i {
+    text-align: center;
+    padding-left: 0;
+  }
 }
 #intro ul.who-am-i li {
-  float: left;
+  display: inline-block;
   border: 1px solid #5f5f81;
   border-radius: 5px;
   padding: 7px;
@@ -404,11 +388,8 @@ section {
     width: 100%;
   }
 }
-#skills .last-skill {
-  margin-top: 30px;
-}
 #skills .work-information {
-  margin-top: 150px;
+  margin-top: 110px;
 }
 #skills .work-information a.work {
   font-weight: bold;
