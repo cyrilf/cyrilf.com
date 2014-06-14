@@ -27,7 +27,7 @@
     <br>
     <!-- <hr class="white-line"> -->
     <!-- <div class="triangle"></div> -->
-    <div>
+    <div class="logo-container">
       <img src="./img/logo.png" alt="logo" class="logo" />
     </div>
     <!-- <div class="sub-title">A french web developer</div> -->
@@ -64,9 +64,9 @@
         <div>So you may ask who am I? Here is the answer:
         </div>
         <ul class="who-am-i">
-            <li><a href="http://github.com/cyrilf">Web lover <img src="img/icons/heart.png" alt="heart"/></a></li>
-            <li><a href="http://echomind.tumblr.com">Music Addict <img src="img/icons/music.png" alt="music"/></a></li>
-            <li><a href="http://requiremind.com">Tech blogger <img src="img/icons/blog.png" alt="blog"/></a></li>
+            <li><a href="http://github.com/cyrilf">Web lover <span class="glyphicon glyphicon-heart-empty"></span></a></li>
+            <li><a href="http://echomind.cyrilf.com">Music Addict <span class="glyphicon glyphicon-music"></span></a></li>
+            <li><a href="http://requiremind.com">Tech blogger <span class="glyphicon glyphicon-pencil"></span></li>
           </ul>
       </div>
       <div class="col-md-6 intro-right">
@@ -138,12 +138,23 @@
 
   <div class="separator"></div>
 
-  <footer class="content full-width" id="footer">
+  <section class="content full-width" id="footer">
     <a id="intro-contact"></a>
-    Social icons go there!!!
-    Github / LinkedIn / Twitter / G+
-    <p>cyrilf - cyrilf.com</p>
-  </footer>
+    <div class="row">
+      <h3 class="section-title dark" data-hover="contact">Contact</h3>
+      <div id="social-links">
+        <a href="http://linkedin.com/in/cyrilfrancesconi"><span class='symbol' title='LinkedIn'>circlelinkedin</span></a>
+        <a href="http://github.com/cyrilf"><span class='symbol' title='Github'>circlegithubalt</span></a>
+        <a href="http://twitter.com/cyrilf_"><span class='symbol' title='Twitter'>circletwitterbird</span></a>
+      </div>
+      <div class="logo-container">
+        <img src="./img/logo.png" alt="logo" class="logo" />
+      </div>
+      <div class="conclusion" data-hover="cyrilf.com">
+        cyrilf.com
+      </div>
+    </div>
+  </section>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>

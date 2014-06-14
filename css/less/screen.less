@@ -1,6 +1,5 @@
-/**
- * Colors: https://kuler.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=0&name=tree&mode=rgb&rgbvalues=0.1843137254901961,0.17254901960784313,0.24313725490196078,0.11764705882352941,0.11764705882352941,0.1607843137254902,0.20784313725490197,0.24705882352941178,0.2196078431372549,0.8352941176470589,0.8509803921568627,0.3411764705882353,0.9529411764705882,0.9372549019607843,0.9019607843137255&swatchOrder=0,1,2,3,4
- */
+@import './color.less';
+@import './icon.less';
 
 @font-face {
     font-family: "Jenna Sue";
@@ -9,8 +8,8 @@
 
 html, body {
   overflow-x: hidden;
-  margin: none;
-  padding: none;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 
@@ -37,6 +36,75 @@ body {
   margin: 0;
 }
 
+.logo, .logo-container {
+  height: 125px;
+  width: 125px;
+}
+
+.circles(@color-outer, @color-hover, @color-outer-hover) {
+  border-radius: 50%;
+  position: relative;
+
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+
+  &:after {
+    top: 0;
+    left: 0;
+    padding: 0;
+    box-shadow: 0 0 0 8px @color-outer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+
+    -webkit-transition: -webkit-transform 0.7s, opacity 0.2s, box-shadow 0.3s, -webkit-filter 0.7s;
+    -moz-transition: -moz-transform 0.7s, opacity 0.2s, box-shadow 0.2s;
+    transition: transform 0.7s, opacity 0.2s, box-shadow 0.2s, filter 0.7s;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 8px @color-hover;
+    // -webkit-filter: grayscale(30%);
+    // filter: none;
+    &:after {
+      -webkit-transform: scale(1.11);
+      -moz-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+      transform: scale(1.11);
+      box-shadow: 0 0 0 110px @color-outer-hover;
+      opacity: 0.5;
+    }
+  }
+}
+
+.title-hover(@color, @borders-color: @color) {
+  &:before {
+    padding-top: 3px;
+    margin-top: -4px;
+    position: absolute;
+    overflow: hidden;
+    max-width: 0;
+    color: @color;
+    content: attr(data-hover);
+    -webkit-transition: max-width 0.7s;
+    transition: max-width 0.7s;
+    border-top: @borders-color 1px solid;
+    border-bottom: @borders-color 1px solid;
+  }
+
+  &:hover {
+    cursor: default;
+    color: transparent;
+    transition: color 2s;
+    &:before {
+      max-width: 100%;
+    }
+  }
+}
+
 /**
  * Header
  */
@@ -60,24 +128,7 @@ body {
     display: inline-block;
     position: relative;
 
-    &:before {
-      position: absolute;
-      overflow: hidden;
-      max-width: 0;
-      color: #2ECC71;
-      content: attr(data-hover);
-      -webkit-transition: max-width 0.7s;
-      transition: max-width 0.7s;
-    }
-
-    &:hover {
-      cursor: default;
-      color: transparent;
-      transition: color 2s;
-      &:before {
-        max-width: 100%;
-      }
-    }
+    .title-hover(@main, transparent);
   }
 
   .triangle {
@@ -96,10 +147,6 @@ body {
     }
   }
 
-  .logo {
-    height: 125px;
-  }
-
   hr.white-line {
     border-bottom: white solid .5px;
     width: 17%;
@@ -109,6 +156,11 @@ body {
 
   .sub-title {
     font-size: 20px;
+  }
+
+  .logo-container {
+    .circles(transparent, @medium, @light);
+    margin: 0 auto;
   }
 }
 
@@ -179,25 +231,10 @@ section, footer {
   position: relative;
   text-transform: uppercase;
 
-  &:before {
-    padding-top: 3px;
-    margin-top: -4px;
-    position: absolute;
-    overflow: hidden;
-    max-width: 0;
-    color: black;
-    content: attr(data-hover);
-    -webkit-transition: max-width 0.7s;
-    transition: max-width 0.7s;
-    border-top: black 1px solid;
-    border-bottom: black 1px solid;
-  }
+  .title-hover(@dark);
 
-  &:hover {
-    cursor: default;
-    &:before {
-      max-width: 100%;
-    }
+  &.dark {
+    .title-hover(@medium);
   }
 }
 
@@ -207,8 +244,8 @@ section, footer {
 
 #intro {
   // background: #c0392b;
-  color: #1E1E29;
-  background: #F3EFE6;
+  color: @dark;
+  background: @light;
   margin-top: -20px;
 
   .hey {
@@ -235,46 +272,8 @@ section, footer {
       background-size: cover;
       width: 400px;
       height: 400px;
-      border-radius: 50%;
-      position: relative;
-      margin: 0 auto;
 
-      // -webkit-filter: grayscale(100%);
-      // filter: gray;
-
-      -webkit-transition: box-shadow 0.2s;
-      -moz-transition: box-shadow 0.2s;
-      transition: box-shadow 0.2s;
-
-      &:after {
-        top: 0;
-        left: 0;
-        padding: 0;
-        box-shadow: 0 0 0 8px #1E1E29;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        content: '';
-
-        -webkit-transition: -webkit-transform 0.7s, opacity 0.2s, box-shadow 0.3s, -webkit-filter 0.7s;
-        -moz-transition: -moz-transform 0.7s, opacity 0.2s, box-shadow 0.2s;
-        transition: transform 0.7s, opacity 0.2s, box-shadow 0.2s, filter 0.7s;
-      }
-
-      &:hover {
-        box-shadow: 0 0 0 8px #1E1E29;
-        // -webkit-filter: grayscale(30%);
-        // filter: none;
-        &:after {
-          -webkit-transform: scale(1.11);
-          -moz-transform: scale(1.07);
-          -ms-transform: scale(1.07);
-          transform: scale(1.11);
-          box-shadow: 0 0 0 110px #1E1E29;
-          opacity: 0.5;
-        }
-      }
+      .circles(@light, @medium, @medium);
     }
   }
 }
@@ -283,12 +282,12 @@ section, footer {
   position: relative;
   z-index: 2;
   height: 1px;
-  background-color: #fff;
+  background-color: @light;
 }
 
 #projects {
   z-index: 2;
-  background: #353F38;
+  background: @dark-light;
 
   #project-list {
     font-size: 15px;
@@ -296,16 +295,48 @@ section, footer {
 }
 
 #skills {
-  background: #D5D957;
-}
-
-#footer {
-  background: #F3EFE6;
+  background: @main;
 }
 
 /**
  * Footer
  */
-footer {
-  color: #F3EFE6;
+#footer {
+  color: @dark-light;
+  background: @light;
+
+  #social-links {
+    z-index: 2;
+    margin-top: 55px;
+
+    a {
+      margin-left: 5%;
+    }
+
+    a:first-child {
+      margin-left: 0;
+    }
+
+    a, a:hover, a:active {
+      text-decoration: none;
+      outline: none;
+      color: inherit;
+    }
+
+    a:hover {
+      color: @main;
+    }
+  }
+
+  .logo-container {
+    .circles(transparent, @medium, @medium);
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .conclusion {
+    font-family: 'Jenna Sue';
+    font-size: 45px;
+  }
 }
