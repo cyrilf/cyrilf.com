@@ -17,13 +17,20 @@ function randomHeader() {
       1: {
         url: './img/lake.jpg',
         style: {
-          background: 'rgba(240, 212, 149, 1) url(./img/lake.jpg) no-repeat center 49%'
+          background: 'rgba(240, 212, 149, 1) url(./img/lake.jpg) no-repeat center 46%'
         }
       },
       2: {
-        url: './img/mountain.jpg',
+        url: './img/tree.jpg',
         style: {
-          background: 'rgba(117,125,148, 1) url(./img/mountain.jpg) no-repeat center 30%',
+          background: 'rgba(213,217,87, 1) url(./img/tree.jpg) no-repeat center 52%',
+          'background-size': 'cover'
+        }
+      },
+      3: {
+        url: './img/fog.jpg',
+        style: {
+          background: 'rgba(213,217,87, 1) url(./img/fog.jpg) no-repeat center 63%',
           'background-size': 'cover'
         }
       }

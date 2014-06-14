@@ -1,7 +1,20 @@
+/**
+ * Colors: https://kuler.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=0&name=tree&mode=rgb&rgbvalues=0.1843137254901961,0.17254901960784313,0.24313725490196078,0.11764705882352941,0.11764705882352941,0.1607843137254902,0.20784313725490197,0.24705882352941178,0.2196078431372549,0.8352941176470589,0.8509803921568627,0.3411764705882353,0.9529411764705882,0.9372549019607843,0.9019607843137255&swatchOrder=0,1,2,3,4
+ */
+@font-face {
+  font-family: "Jenna Sue";
+  src: url(../fonts/JennaSue.ttf) format("truetype");
+}
+html,
+body {
+  overflow-x: hidden;
+  margin: none;
+  padding: none;
+  width: 100%;
+}
 body {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  padding-top: 0;
   color: #fafafa;
   line-height: 1.231;
 }
@@ -36,14 +49,42 @@ body {
   font-weight: normal;
   text-align: center;
   margin-bottom: 0;
+  display: inline-block;
+  position: relative;
+}
+.header .main-title:before {
+  position: absolute;
+  overflow: hidden;
+  max-width: 0;
+  color: #2ECC71;
+  content: attr(data-hover);
+  -webkit-transition: max-width 0.7s;
+  transition: max-width 0.7s;
+}
+.header .main-title:hover {
+  cursor: default;
+  color: transparent;
+  transition: color 2s;
+}
+.header .main-title:hover:before {
+  max-width: 100%;
 }
 .header .triangle {
   display: inline-block;
+  position: relative;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 55px 35px 5px 35px;
   border-color: rgba(255, 255, 255, 0.9) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  transition: border-color 0.7s;
+}
+.header .triangle:hover {
+  border-color: #2c3e50 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  transition: border-color 0.3s;
+}
+.header .logo {
+  height: 125px;
 }
 .header hr.white-line {
   border-bottom: white solid .5px;
@@ -67,7 +108,6 @@ body {
 }
 .navbar .navbar-brand {
   display: none;
-  color: #526476;
 }
 .navbar .nav > li > a {
   font-size: 23px;
@@ -81,6 +121,10 @@ body {
 @media (max-width: 767px) {
   .navbar .navbar-brand {
     display: block;
+    color: #526476;
+  }
+  .navbar .navbar-nav-centered {
+    width: 100%;
   }
 }
 @media (min-width: 767px) {
@@ -98,21 +142,43 @@ footer {
   position: relative;
 }
 .section-title {
-  border: 1px solid white;
   letter-spacing: 2px;
   margin: 0 auto;
   padding: 11px;
   display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+.section-title:before {
+  padding-top: 3px;
+  margin-top: -4px;
+  position: absolute;
+  overflow: hidden;
+  max-width: 0;
+  color: black;
+  content: attr(data-hover);
+  -webkit-transition: max-width 0.7s;
+  transition: max-width 0.7s;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
+}
+.section-title:hover {
+  cursor: default;
+}
+.section-title:hover:before {
+  max-width: 100%;
 }
 /**
  * First section
  */
 #intro {
-  background: #c0392b;
+  color: #1E1E29;
+  background: #F3EFE6;
   margin-top: -20px;
 }
 #intro .hey {
-  font-size: 42px;
+  font-size: 100px;
+  font-family: 'Jenna Sue';
 }
 #intro a {
   color: inherit;
@@ -125,8 +191,8 @@ footer {
   padding-left: 10%;
 }
 #intro .intro-right #picture-me {
-  background: url('../img/me.jpg');
-  background-size: contain;
+  background: url('../img/me2.jpg') 50%;
+  background-size: cover;
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -140,25 +206,25 @@ footer {
   top: 0;
   left: 0;
   padding: 0;
-  box-shadow: 0 0 0 8px #FFF;
+  box-shadow: 0 0 0 8px #1E1E29;
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   content: '';
-  -webkit-transition: -webkit-transform 0.7s, opacity 0.2s, box-shadow 0.3s;
+  -webkit-transition: -webkit-transform 0.7s, opacity 0.2s, box-shadow 0.3s, -webkit-filter 0.7s;
   -moz-transition: -moz-transform 0.7s, opacity 0.2s, box-shadow 0.2s;
-  transition: transform 0.7s, opacity 0.2s, box-shadow 0.2s;
+  transition: transform 0.7s, opacity 0.2s, box-shadow 0.2s, filter 0.7s;
 }
 #intro .intro-right #picture-me:hover {
-  box-shadow: 0 0 0 8px #FFF;
+  box-shadow: 0 0 0 8px #1E1E29;
 }
 #intro .intro-right #picture-me:hover:after {
   -webkit-transform: scale(1.11);
   -moz-transform: scale(1.07);
   -ms-transform: scale(1.07);
   transform: scale(1.11);
-  box-shadow: 0 0 0 110px #FFF;
+  box-shadow: 0 0 0 110px #1E1E29;
   opacity: 0.5;
 }
 .separator {
@@ -169,20 +235,20 @@ footer {
 }
 #projects {
   z-index: 2;
-  background: #27ae60;
+  background: #353F38;
 }
 #projects #project-list {
   font-size: 15px;
 }
 #skills {
-  background: #2980b9;
+  background: #D5D957;
 }
 #footer {
-  background: #2c3e50;
+  background: #F3EFE6;
 }
 /**
  * Footer
  */
 footer {
-  color: #7f8c8d;
+  color: #F3EFE6;
 }
