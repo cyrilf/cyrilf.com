@@ -27,6 +27,19 @@ body {
   }
 }
 
+hr {
+  border: none;
+}
+
+.clear {
+  clear: both;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 @media (max-width: 767px) {
   body {
     padding-right: 0;
@@ -134,7 +147,7 @@ body {
     margin-bottom: 0;
     display: inline-block;
     position: relative;
-    color: @light;
+    color: @white;
 
     .title-hover(@main, transparent);
   }
@@ -285,7 +298,6 @@ section {
   }
 
   ul.who-am-i {
-    list-style: none;
     margin: 0 auto;
     margin-top: 0;
     padding-left: 9%;
@@ -329,8 +341,81 @@ section {
 }
 
 #skills {
-  color: @light;
+  color: @white;
   background: @main;
+  // color: @dark-light;
+
+  .skill-main-list {
+    margin: 0 auto;
+    width: 770px;
+    margin-bottom: 42px;
+    overflow: hidden;
+
+    &:hover li img {
+      filter: none;
+      -webkit-filter: grayscale(0);
+    }
+
+    li {
+      float: left;
+      margin-left: 24px;
+      margin-bottom: 15px;
+
+      img {
+        filter: url(filters.svg#grayscale);
+        filter: gray;
+        -webkit-filter: grayscale(1);
+      }
+    }
+
+    @media (min-width: 767px) {
+      li:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .skill-main-list {
+      width: 100%;
+    }
+  }
+
+  .last-skill {
+    margin-top: 30px;
+  }
+
+  .work-information {
+    margin-top: 150px;
+
+    a.work {
+      font-weight: bold;
+      -webkit-transition: color 0.4s;
+      -moz-transition: color 0.4s;
+      transition: color 0.4s;
+
+      &:hover {
+        color: @dark-light;
+      }
+    }
+
+    .see-resume {
+      display: inline-block;
+      border: 1px solid @white;
+      border-radius: 5px;
+      padding: 7px;
+
+      -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+      &:hover {
+        background-color: @dark-light;
+        color: @white;
+        border-color: @white;
+      }
+    }
+  }
 }
 
 /**

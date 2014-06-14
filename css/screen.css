@@ -54,6 +54,16 @@ body a:active {
   outline: none;
   color: inherit;
 }
+hr {
+  border: none;
+}
+.clear {
+  clear: both;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
 @media (max-width: 767px) {
   body {
     padding-right: 0;
@@ -92,7 +102,7 @@ body a:active {
   margin-bottom: 0;
   display: inline-block;
   position: relative;
-  color: #f3efe6;
+  color: #ffffff;
 }
 .header .main-title:before {
   padding-top: 3px;
@@ -326,7 +336,6 @@ section {
   }
 }
 #intro ul.who-am-i {
-  list-style: none;
   margin: 0 auto;
   margin-top: 0;
   padding-left: 9%;
@@ -362,8 +371,67 @@ section {
   font-size: 15px;
 }
 #skills {
-  color: #f3efe6;
+  color: #ffffff;
   background: #d5d957;
+}
+#skills .skill-main-list {
+  margin: 0 auto;
+  width: 770px;
+  margin-bottom: 42px;
+  overflow: hidden;
+}
+#skills .skill-main-list:hover li img {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+#skills .skill-main-list li {
+  float: left;
+  margin-left: 24px;
+  margin-bottom: 15px;
+}
+#skills .skill-main-list li img {
+  filter: url(filters.svg#grayscale);
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
+@media (min-width: 767px) {
+  #skills .skill-main-list li:first-child {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  #skills .skill-main-list {
+    width: 100%;
+  }
+}
+#skills .last-skill {
+  margin-top: 30px;
+}
+#skills .work-information {
+  margin-top: 150px;
+}
+#skills .work-information a.work {
+  font-weight: bold;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  transition: color 0.4s;
+}
+#skills .work-information a.work:hover {
+  color: #2f2c3e;
+}
+#skills .work-information .see-resume {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 7px;
+  -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+#skills .work-information .see-resume:hover {
+  background-color: #2f2c3e;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 /**
  * Footer
