@@ -8,32 +8,32 @@ function randomHeader() {
   if($header.length) {
     var backgrounds = {
       0: {
-        url: './img/space.png',
+        url: './img/tree.jpg',
         style: {
-          background: 'rgba(142, 68, 173, 1) url(./img/space.png) no-repeat right center fixed',
+          background: 'rgba(213, 217, 87, 1) url(./img/tree.jpg) no-repeat center 50%',
           'background-size': 'cover'
         }
       },
       1: {
-        url: './img/lake.jpg',
-        style: {
-          background: 'rgba(240, 212, 149, 1) url(./img/lake.jpg) no-repeat center 46%'
-        }
-      },
-      2: {
-        url: './img/tree.jpg',
-        style: {
-          background: 'rgba(213,217,87, 1) url(./img/tree.jpg) no-repeat center 52%',
-          'background-size': 'cover'
-        }
-      },
-      3: {
         url: './img/fog.jpg',
         style: {
-          background: 'rgba(213,217,87, 1) url(./img/fog.jpg) no-repeat center 63%',
+          background: 'rgba(55, 88, 85, 1) url(./img/fog.jpg) no-repeat center 63%',
           'background-size': 'cover'
         }
-      }
+      },
+      // 2: {
+      //   url: './img/space.png',
+      //   style: {
+      //     background: 'rgba(142, 68, 173, 1) url(./img/space.png) no-repeat right center fixed',
+      //     'background-size': 'cover'
+      //   }
+      // },
+      // 3: {
+      //   url: './img/lake.jpg',
+      //   style: {
+      //     background: 'rgba(240, 212, 149, 1) url(./img/lake.jpg) no-repeat center 46%'
+      //   }
+      // }
     };
 
     var bgCount = Object.keys(backgrounds).length;
