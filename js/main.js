@@ -10,13 +10,14 @@ function randomHeader() {
       0: {
         url: './img/tree.jpg',
         style: {
-          background: 'rgba(213, 217, 87, 1) url(./img/tree.jpg) 0 -400px no-repeat fixed'
+          background: 'rgba(213, 217, 87, 1) url(./img/tree.jpg) 0 50% no-repeat',
+	  'background-size': 'cover'
         }
       },
       1: {
         url: './img/fog.jpg',
         style: {
-          background: 'rgba(55, 88, 85, 1) url(./img/fog.jpg) 0 -335px no-repeat fixed',
+          background: 'rgba(55, 88, 85, 1) url(./img/fog.jpg) center 63% no-repeat',
           'background-size': 'cover'
         }
       },
