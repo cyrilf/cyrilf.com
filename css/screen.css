@@ -307,8 +307,7 @@ section {
   padding-left: 10%;
 }
 #intro .intro-right #picture-me {
-  background: url('../img/me.jpg') 50%;
-  background-size: cover;
+  background: url('../img/me.jpg');
   width: 400px;
   height: 400px;
   margin: 0 auto;
@@ -472,7 +471,6 @@ section {
 }
 #projects #project-list #les-mains-vertes {
   background: url('../img/projects/les-mains-vertes.png') no-repeat 50% #363636;
-  background-size: contain;
 }
 #projects #project-list #angular-converter {
   background-color: #27ae60;
@@ -499,8 +497,7 @@ section {
   background-color: #95a5a6;
 }
 #projects #project-list #echomind {
-  background: url('../img/projects/echomind.png') #9a1551 no-repeat;
-  background-size: cover;
+  background: url('../img/projects/echomind.jpg') #1e1e29;
 }
 @media (max-width: 767px) {
   #projects #project-list {
