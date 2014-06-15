@@ -253,6 +253,27 @@ section {
 .section-title.dark:hover:before {
   max-width: 100%;
 }
+.section-title.light:before {
+  padding-top: 3px;
+  margin-top: -4px;
+  position: absolute;
+  overflow: hidden;
+  max-width: 0;
+  color: #f3efe6;
+  content: attr(data-hover);
+  -webkit-transition: max-width 0.7s;
+  transition: max-width 0.7s;
+  border-top: #f3efe6 1px solid;
+  border-bottom: #f3efe6 1px solid;
+}
+.section-title.light:hover {
+  cursor: default;
+  color: transparent;
+  transition: color 2s;
+}
+.section-title.light:hover:before {
+  max-width: 100%;
+}
 /**
  * First section
  */
@@ -352,7 +373,94 @@ section {
   background: #2f2c3e;
 }
 #projects #project-list {
-  font-size: 15px;
+  font-size: 17px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0 auto;
+  width: 1710px;
+}
+#projects #project-list li {
+  min-width: 440px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+#projects #project-list figure {
+  position: relative;
+  overflow: hidden;
+}
+#projects #project-list figure > div {
+  text-align: center;
+  font-size: 75px;
+  line-height: 200px;
+  background: #ffffff;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+#projects #project-list figure:hover > div,
+#projects #project-list figure.cs-hover > div {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+#projects #project-list figure:hover figcaption,
+#projects #project-list figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+#projects #project-list figcaption {
+  position: absolute;
+  padding: 20px;
+  background: #1e1e29;
+  color: #d5d957;
+  height: 55%;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+#projects #project-list figcaption h3 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+#projects #project-list figcaption > div {
+  max-width: 76%;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+#projects #project-list figcaption a {
+  text-align: center;
+  padding: 5px;
+  border-radius: 2px;
+  display: inline-block;
+  background: #787b1c;
+  color: #ffffff;
+  max-width: 20%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media (max-width: 767px) {
+  #projects #project-list {
+    width: 100%;
+  }
 }
 #skills {
   color: #ffffff;
