@@ -346,15 +346,20 @@ section {
   }
 }
 #intro ul.who-am-i li {
+  margin-left: 15px;
+  margin-top: 15px;
   display: inline-block;
   border: 1px solid #5f5f81;
   border-radius: 5px;
   padding: 7px;
-  margin-left: 15px;
-  margin-top: 15px;
   -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+#intro ul.who-am-i li:hover {
+  background-color: #d5d957;
+  color: #f3efe6;
+  border-color: #d5d957;
 }
 #intro ul.who-am-i li:hover {
   background-color: #d5d957;
@@ -490,10 +495,29 @@ section {
 #projects #project-list #sublimipsum {
   background: #95a5a6;
 }
+#projects #project-list #echomind {
+  background: url('../img/projects/echomind.png') #9a1551 no-repeat;
+  background-size: cover;
+}
 @media (max-width: 767px) {
   #projects #project-list {
     width: 100%;
   }
+}
+#projects .see-github {
+  margin-top: 50px;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 7px;
+  -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+#projects .see-github:hover {
+  background-color: #ffffff;
+  color: #2f2c3e;
+  border-color: #ffffff;
 }
 #skills {
   color: #ffffff;
@@ -553,7 +577,7 @@ section {
 #skills .work-information .see-resume:hover {
   background-color: #2f2c3e;
   color: #ffffff;
-  border-color: #ffffff;
+  border-color: #2f2c3e;
 }
 /**
  * Footer

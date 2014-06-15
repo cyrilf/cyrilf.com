@@ -3,4 +3,4 @@
 
 # TEAM
 
-    Cyril Francesconi, Web Developer, @cyrilf_
+    Cyril Francesconi, Web Developer, cyrilf

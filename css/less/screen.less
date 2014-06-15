@@ -125,6 +125,23 @@ ul {
   }
 }
 
+.see(@border, @background-hover, @color-hover) {
+  display: inline-block;
+  border: 1px solid @border;
+  border-radius: 5px;
+  padding: 7px;
+
+  -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+  &:hover {
+    background-color: @background-hover;
+    color: @color-hover;
+    border-color: @background-hover;
+  }
+}
+
 /**
  * Header
  */
@@ -286,16 +303,10 @@ section {
     }
 
     li {
-      display: inline-block;
-      border: 1px solid lighten(@dark, 30%);
-      border-radius: 5px;
-      padding: 7px;
       margin-left: 15px;
       margin-top: 15px;
 
-      -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      .see(lighten(@dark, 30%), @main, @light);
 
       &:hover {
         background-color: @main;
@@ -455,12 +466,22 @@ section {
     #sublimipsum {
       background: #95a5a6;
     }
+
+    #echomind {
+      background: url('../img/projects/echomind.png') #9a1551 no-repeat;
+      background-size: cover;
+    }
   }
 
   @media (max-width: 767px) {
     #project-list {
       width: 100%;
     }
+  }
+
+  .see-github {
+    margin-top: 50px;
+    .see(@white, @white, @dark-light);
   }
 }
 
@@ -519,20 +540,7 @@ section {
     }
 
     .see-resume {
-      display: inline-block;
-      border: 1px solid @white;
-      border-radius: 5px;
-      padding: 7px;
-
-      -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-
-      &:hover {
-        background-color: @dark-light;
-        color: @white;
-        border-color: @white;
-      }
+      .see(@white, @dark-light, @white);
     }
   }
 }
