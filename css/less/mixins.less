@@ -5,9 +5,9 @@
   border-radius: 50%;
   position: relative;
 
-  -webkit-transition: box-shadow 0.2s;
-  -moz-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+  -webkit-transition: box-shadow .2s;
+  -moz-transition: box-shadow .2s;
+  transition: box-shadow .2s;
 
   &:after {
     top: 0;
@@ -20,9 +20,9 @@
     border-radius: 50%;
     content: '';
 
-    -webkit-transition: -webkit-transform 0.7s, opacity 0.2s, box-shadow 0.3s, -webkit-filter 0.7s;
-    -moz-transition: -moz-transform 0.7s, opacity 0.2s, box-shadow 0.2s;
-    transition: transform 0.7s, opacity 0.2s, box-shadow 0.2s, filter 0.7s;
+    -webkit-transition: -webkit-transform .7s, opacity .2s, box-shadow .3s, -webkit-filter .7s;
+    -moz-transition: -moz-transform .7s, opacity .2s, box-shadow .2s;
+    transition: transform .7s, opacity .2s, box-shadow .2s, filter .7s;
   }
 
   &:hover {
@@ -35,7 +35,7 @@
       -ms-transform: scale(1.07);
       transform: scale(1.11);
       box-shadow: 0 0 0 110px @color-outer-hover;
-      opacity: 0.5;
+      opacity: .5;
     }
   }
 }
@@ -52,8 +52,8 @@
     max-width: 0;
     color: @color;
     content: attr(data-hover);
-    -webkit-transition: max-width 0.7s;
-    transition: max-width 0.7s;
+    -webkit-transition: max-width .7s;
+    transition: max-width .7s;
     border-top: @borders-color 1px solid;
     border-bottom: @borders-color 1px solid;
   }
@@ -77,9 +77,9 @@
   border-radius: 5px;
   padding: 7px;
 
-  -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  -moz-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  -webkit-transition: background-color .3s, color .3s, border-color .3s;
+  -moz-transition: background-color .3s, color .3s, border-color .3s;
+  transition: background-color .3s, color .3s, border-color .3s;
 
   &:hover {
     background-color: @background-hover;
