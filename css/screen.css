@@ -101,6 +101,21 @@ ul {
 .header {
   background: #d5d957;
 }
+.header#tree {
+  background: #d5d957 url(../img/tree.jpg) 0 50% no-repeat;
+  background-size: cover;
+}
+.header#fog {
+  background: #375855 url(../img/fog.jpg) center 63% no-repeat;
+  background-size: cover;
+}
+.header#space {
+  background: #8e44ad url(../img/space.png) no-repeat right center fixed;
+  background-size: cover;
+}
+.header#lake {
+  background: #f0d495 url(../img/lake.jpg) no-repeat center 46%;
+}
 .header h1,
 .header h2,
 .header h3 {
