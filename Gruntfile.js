@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     // Automatically run a task when a file changes
     watch: {
       styles: {
-        files: ["css/less/*"],
+        files: ["css/less/**/*"],
         tasks: "less:dev",
         options: {
           livereload: true

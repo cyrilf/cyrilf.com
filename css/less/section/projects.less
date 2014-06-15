@@ -1,0 +1,160 @@
+#projects {
+  color: @light;
+  z-index: 2;
+  background: @dark-light;
+
+  #project-list {
+    font-size: 17px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0 auto;
+
+    li {
+      padding: 20px;
+      text-align: left;
+      position: relative;
+    }
+
+    figure {
+      position: relative;
+      overflow: hidden;
+      background: @white;
+
+      > div {
+        text-align: center;
+        font-size: 55px;
+        line-height: 200px;
+        width: 100%;
+
+        -webkit-transition: -webkit-transform 0.4s;
+        -moz-transition: -moz-transform 0.4s;
+        transition: transform 0.4s;
+      }
+
+      &:hover > div, &.cs-hover > div {
+        -webkit-transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        transform: translateY(-50px);
+      }
+
+      &:hover figcaption, &.cs-hover figcaption {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+        -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+        transition: transform 0.4s, opacity 0.1s;
+      }
+    }
+
+    figcaption {
+      position: absolute;
+      padding: 20px;
+      background: @dark;
+      color: @main;
+      height: 55%;
+      width: 100%;
+      bottom: 0;
+      opacity: 0;
+      -webkit-transform: translateY(100%);
+      -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      transform: translateY(100%);
+      -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+      -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+      transition: transform 0.4s, opacity 0.1s 0.3s;
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        color: @white;
+      }
+
+      > div {
+        max-width: 76%;
+
+        -webkit-transition: -webkit-transform 0.4s;
+        -moz-transition: -moz-transform 0.4s;
+        transition: transform 0.4s;
+      }
+
+      a {
+        text-align: center;
+        padding: 5px;
+        border-radius: 2px;
+        display: inline-block;
+        background: darken(@main, 30%);
+        color: @white;
+        max-width: 20%;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    #distance {
+      background: @main;
+    }
+
+    #require-mind {
+      background: url('../img/projects/require-mind.png') @white no-repeat 50%;
+      background-size: contain;
+    }
+
+    #les-mains-vertes {
+      background: url('../img/projects/les-mains-vertes.png') no-repeat 50% #363636;
+      background-size: contain;
+    }
+
+    #angular-converter {
+      background: #27ae60;
+    }
+
+    #angular-vibrator {
+      background: lighten(@dark, 15%);
+    }
+
+    #ng-chat {
+      background: #1abc9c;
+    }
+
+    #windmill {
+      background: #e67e22;
+    }
+
+    #hidden-code {
+      background: #0088cc;
+    }
+
+    #sneeky {
+      background: #c0392b;
+    }
+
+    #laserize {
+      background: #8e44ad;
+    }
+
+    #sublimipsum {
+      background: #95a5a6;
+    }
+
+    #echomind {
+      background: url('../img/projects/echomind.png') #9a1551 no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #project-list {
+      width: 100%;
+    }
+  }
+
+  .see-github {
+    margin-top: 50px;
+    .see(@white, @white, @dark-light);
+  }
+}

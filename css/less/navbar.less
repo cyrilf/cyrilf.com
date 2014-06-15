@@ -1,0 +1,44 @@
+.navbar {
+
+  a {
+    color: @dark-light;
+  }
+
+  .navbar-nav-centered {
+    margin: 0 auto;
+    width: 439px;
+    float: none;
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .nav > li > a {
+    font-size: 23px;
+  }
+
+  .nav > li.active > a,
+  .nav > li.active > a:hover,
+  .nav > li.active > a:focus {
+    background: none;
+    color: @dark;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar .navbar-brand {
+    display: block;
+    color: @dark-light;
+  }
+
+  .navbar .navbar-nav-centered {
+    width: 100%;
+  }
+}
+
+@media (min-width: 767px) {
+  .navbar .nav > li > a {
+    padding: 29px 20px 27px;
+  }
+}

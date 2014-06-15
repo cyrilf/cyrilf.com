@@ -1,0 +1,37 @@
+#contact {
+  color: @dark-light;
+  background: @light;
+  padding-bottom:  5%;
+
+  #social-links {
+    z-index: 2;
+    margin-top: 55px;
+
+    a {
+      margin-left: 5%;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s;
+    }
+
+    a:first-child {
+      margin-left: 0;
+    }
+
+    a:hover {
+      color: @main;
+    }
+  }
+
+  .logo-container {
+    .circles(transparent, @medium, @medium);
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .conclusion {
+    font-family: 'Jenna Sue';
+    font-size: 45px;
+  }
+}

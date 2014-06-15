@@ -5,6 +5,15 @@
  * Colors from Kuler:
  * https://kuler.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=0&name=tree&mode=rgb&rgbvalues=0.1843137254901961,0.17254901960784313,0.24313725490196078,0.11764705882352941,0.11764705882352941,0.1607843137254902,0.20784313725490197,0.24705882352941178,0.2196078431372549,0.8352941176470589,0.8509803921568627,0.3411764705882353,0.9529411764705882,0.9372549019607843,0.9019607843137255&swatchOrder=0,1,2,3,4
  */
+/**
+ * Create a circles effect on hover
+ */
+/**
+ * Create a title hover effect
+ */
+/**
+ * Create a button
+ */
 @font-face {
   font-family: 'Mono Social Icons Font';
   src: url('../fonts/MonoSocialIconsFont-1.10.eot');
@@ -277,9 +286,12 @@ section {
 .section-title.light:hover:before {
   max-width: 100%;
 }
-/**
- * First section
- */
+.separator {
+  position: relative;
+  z-index: 2;
+  height: 1px;
+  background-color: #f3efe6;
+}
 #intro {
   background: #f3efe6;
   margin-top: -20px;
@@ -368,12 +380,6 @@ section {
   background-color: #d5d957;
   color: #f3efe6;
   border-color: #f3efe6;
-}
-.separator {
-  position: relative;
-  z-index: 2;
-  height: 1px;
-  background-color: #f3efe6;
 }
 #projects {
   color: #f3efe6;
@@ -589,30 +595,28 @@ section {
   color: #ffffff;
   border-color: #2f2c3e;
 }
-/**
- * Footer
- */
-#footer {
+#contact {
   color: #2f2c3e;
   background: #f3efe6;
+  padding-bottom: 5%;
 }
-#footer #social-links {
+#contact #social-links {
   z-index: 2;
   margin-top: 55px;
 }
-#footer #social-links a {
+#contact #social-links a {
   margin-left: 5%;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   transition: color 0.3s;
 }
-#footer #social-links a:first-child {
+#contact #social-links a:first-child {
   margin-left: 0;
 }
-#footer #social-links a:hover {
+#contact #social-links a:hover {
   color: #d5d957;
 }
-#footer .logo-container {
+#contact .logo-container {
   border-radius: 50%;
   position: relative;
   -webkit-transition: box-shadow 0.2s;
@@ -622,7 +626,7 @@ section {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-#footer .logo-container:after {
+#contact .logo-container:after {
   top: 0;
   left: 0;
   padding: 0;
@@ -636,10 +640,10 @@ section {
   -moz-transition: -moz-transform 0.7s, opacity 0.2s, box-shadow 0.2s;
   transition: transform 0.7s, opacity 0.2s, box-shadow 0.2s, filter 0.7s;
 }
-#footer .logo-container:hover {
+#contact .logo-container:hover {
   box-shadow: 0 0 0 8px #353f38;
 }
-#footer .logo-container:hover:after {
+#contact .logo-container:hover:after {
   -webkit-transform: scale(1.11);
   -moz-transform: scale(1.07);
   -ms-transform: scale(1.07);
@@ -647,7 +651,7 @@ section {
   box-shadow: 0 0 0 110px #353f38;
   opacity: 0.5;
 }
-#footer .conclusion {
+#contact .conclusion {
   font-family: 'Jenna Sue';
   font-size: 45px;
 }
