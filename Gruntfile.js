@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     watch: {
       styles: {
         files: ["css/less/**/*"],
-        tasks: "less:dev",
+        tasks: ["less:dev", "autoprefixer"],
         options: {
           livereload: true
         }
@@ -35,14 +35,27 @@ module.exports = function(grunt) {
           "css/screen.css": "css/less/screen.less"
         }
       }
+    },
+
+    // Autoprefix css
+    autoprefixer: {
+      options: {
+        browsers: ['last 3 versions']
+      },
+      dist: {
+        files: {
+          'css/screen.css': 'css/screen.css'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task(s).
   grunt.registerTask('default', ['less:dev']);
-  grunt.registerTask("dev", ["less:dev", "watch:styles"]);
-  grunt.registerTask("prod", ["less:prod"]);
+  grunt.registerTask("dev", ["less:dev", "autoprefixer", "watch:styles"]);
+  grunt.registerTask("prod", ["less:prod", "autoprefixer"]);
 };
