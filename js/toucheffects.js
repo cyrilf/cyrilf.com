@@ -71,7 +71,11 @@
       el.querySelector( 'figcaption > a' ).addEventListener( 'touchstart', function(e) {
         e.stopPropagation();
       }, false );
+      el.addEventListener( 'touchmove', function(e) {
+        e.stopPropagation();
+      }, false );
       el.addEventListener( 'touchstart', function(e) {
+        // e.preventDefault();
         classie.toggle( this, 'cs-hover' );
       }, false );
     } );
