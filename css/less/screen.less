@@ -323,11 +323,8 @@ section {
     padding-left: 10%;
     padding-right: 10%;
     margin: 0 auto;
-    width: 1710px;
 
     li {
-      // width: 30%;
-      min-width: 440px;
       padding: 20px;
       text-align: left;
       position: relative;
@@ -336,12 +333,12 @@ section {
     figure {
       position: relative;
       overflow: hidden;
+      background: @white;
 
       > div {
         text-align: center;
-        font-size: 75px;
+        font-size: 55px;
         line-height: 200px;
-        background: @white;
         width: 100%;
 
         -webkit-transition: -webkit-transform 0.4s;
@@ -411,6 +408,52 @@ section {
         bottom: 20px;
         right: 20px;
       }
+    }
+
+    #distance {
+      background: @main;
+    }
+
+    #require-mind {
+      background: url('../img/projects/require-mind.png') @white no-repeat 50%;
+      background-size: contain;
+    }
+
+    #les-mains-vertes {
+      background: url('../img/projects/les-mains-vertes.png') no-repeat 50% #363636;
+      background-size: contain;
+    }
+
+    #angular-converter {
+      background: #27ae60;
+    }
+
+    #angular-vibrator {
+      background: lighten(@dark, 15%);
+    }
+
+    #ng-chat {
+      background: #1abc9c;
+    }
+
+    #windmill {
+      background: #e67e22;
+    }
+
+    #hidden-code {
+      background: #0088cc;
+    }
+
+    #sneeky {
+      background: #c0392b;
+    }
+
+    #laserize {
+      background: #8e44ad;
+    }
+
+    #sublimipsum {
+      background: #95a5a6;
     }
   }
 

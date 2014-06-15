@@ -377,10 +377,8 @@ section {
   padding-left: 10%;
   padding-right: 10%;
   margin: 0 auto;
-  width: 1710px;
 }
 #projects #project-list li {
-  min-width: 440px;
   padding: 20px;
   text-align: left;
   position: relative;
@@ -388,12 +386,12 @@ section {
 #projects #project-list figure {
   position: relative;
   overflow: hidden;
+  background: #ffffff;
 }
 #projects #project-list figure > div {
   text-align: center;
-  font-size: 75px;
+  font-size: 55px;
   line-height: 200px;
-  background: #ffffff;
   width: 100%;
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
@@ -456,6 +454,41 @@ section {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+#projects #project-list #distance {
+  background: #d5d957;
+}
+#projects #project-list #require-mind {
+  background: url('../img/projects/require-mind.png') #ffffff no-repeat 50%;
+  background-size: contain;
+}
+#projects #project-list #les-mains-vertes {
+  background: url('../img/projects/les-mains-vertes.png') no-repeat 50% #363636;
+  background-size: contain;
+}
+#projects #project-list #angular-converter {
+  background: #27ae60;
+}
+#projects #project-list #angular-vibrator {
+  background: #3e3e55;
+}
+#projects #project-list #ng-chat {
+  background: #1abc9c;
+}
+#projects #project-list #windmill {
+  background: #e67e22;
+}
+#projects #project-list #hidden-code {
+  background: #0088cc;
+}
+#projects #project-list #sneeky {
+  background: #c0392b;
+}
+#projects #project-list #laserize {
+  background: #8e44ad;
+}
+#projects #project-list #sublimipsum {
+  background: #95a5a6;
 }
 @media (max-width: 767px) {
   #projects #project-list {
