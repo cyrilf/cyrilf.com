@@ -1,0 +1,382 @@
+﻿/****************************************************************************/
+/*																            */
+/*                               Designed by                                */
+/*                                                                          */
+/*                 ----->            CyrilF_                                */
+/*                                                                          */
+/****************************************************************************/
+
+
+
+/*_________________________________GENERAL_________________________________*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #333 url(../images/wood_texture.jpg);
+	background-repeat : none;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #666;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.2em;
+}
+
+p {
+	width:650px;
+	margin-left:25px;
+	text-align:justify;
+}
+
+/*a et a:hover => voir css.js*/
+
+a {
+	color : #666;
+}
+
+a:visited {
+	color: #666;
+}
+
+a img {
+	border: none;
+}
+
+div#img1 {
+	background: url(../images/nature.jpg);
+}
+div#img2 {
+	background: url(../images/cahier.jpg);
+}
+div#img3 {
+	background: url(../images/contact.jpg);
+}
+
+.right {
+	height : 163px;
+	width: 160px;
+	
+	float: right;
+	margin-left: 20px;
+	
+	-moz-border-radius: 15px; 
+    -webkit-border-radius: 15px; 
+    -khtml-border-radius: 15px; 
+    border-radius: 15px; 
+    behavior: url(../border-radius.htc);
+}
+	
+.hidden {
+	display : none;
+}
+
+/*_________________________________FIN GENERAL_________________________________*/
+/*_____________________________________________________________________________*/
+/*_____________________________________HEAD____________________________________*/
+
+/***LOGO***/
+#logo {
+	width: 750px;
+	height: 65px;
+	margin: 0 auto;
+}
+
+#logo h1 {
+	float: left;
+	padding-top: 30px;
+	margin: 0;
+	color: #FFF;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+/***MENU***/
+#menu {
+	width: 778px;
+	height: 45px;
+	margin: 0 auto;
+	background: #F6F6F6;
+}
+#menu ul {
+	margin: 0;
+	padding: 5px 0 5px 14px;
+	list-style: none;
+}
+#menu li {
+	display: inline;
+}
+#menu a {
+	display: block;
+	float: left;
+	height: 17px;
+	padding: 9px 30px 9px 30px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #333;
+}
+
+/*_________________________________FIN HEAD_________________________________*/
+/*__________________________________________________________________________*/
+/*___________________________________PAGE___________________________________*/
+
+#page {
+	width: 756px;
+	height : auto;
+	margin: 0 auto;
+	background: #FFF;
+	padding: 10px;
+	
+	-webkit-box-shadow: #666 3px 3px 20px;
+	-moz-box-shadow: #666 3px 3px 20px;
+	box-shadow: #666 3px 3px 20px;
+}
+
+/*_________________________________FIN PAGE_________________________________*/
+/*__________________________________________________________________________*/
+/*__________________________________CONTENT_________________________________*/
+
+#content {
+	width: 715px;
+	padding: 20px 20px 20px 20px;
+	border: 1px solid #E7E7E7;
+	background : #FFF;
+}
+
+/*________________________________FIN CONTENT_______________________________*/
+/*__________________________________________________________________________*/
+/*___________________________________FOOTER_________________________________*/
+
+#footer {
+	width: 750px;
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+	font-size: smaller;
+	color: #666;
+}
+
+#footer p {
+	margin: 0;
+	
+}
+
+#temp{
+	margin : 5px auto;
+	text-align : center;
+}
+
+/*_________________________________FIN FOOTER_________________________________*/
+/*____________________________________________________________________________*/
+/*_________________________________INDEX.PHP__________________________________*/
+
+#conteneur {
+	width:945px;
+	margin : 0 auto;
+}
+
+#conteneur #fleche {
+	width :61px;
+	height :700px;
+	position : absolute;
+	top:-700px;
+}
+
+#proposition {
+	color : #7DC50C;
+}
+
+/*_______________________________FIN INDEX.PHP_______________________________*/
+/*___________________________________________________________________________*/
+/*___________________________________CV.PHP__________________________________*/
+
+img.divise {
+	margin-top : -20px;
+	margin-bottom : 20px;
+	float : left;
+}
+
+/*_________________________________FIN CV.PHP_________________________________*/
+/*____________________________________________________________________________*/
+/*_________________________________CONTACT.PHP________________________________*/
+
+input, textarea {
+	color: #666666;
+	font-weight : bold;
+}
+
+#envoyerL {
+	margin-left : 250px;
+}
+#envoyerR {
+	margin-right : 250px;
+}
+.obligatoire {
+	color: #83DB16;
+}
+
+#captcha {
+	background:black;
+	font-size : 17px;
+	color : white;
+}
+
+iframe:first-child {
+	position : relative;
+	top : -38px;
+	width: 200px;
+	height: 60px;
+}
+
+iframe a {
+	color : #666;
+}
+
+iframe a:visited {
+	color: #666;
+}
+
+img#iconeUser {
+	position : relative;
+	left : 32px;
+	top : -42px;
+}
+
+
+
+/*_______________________________FIN CONTACT.PHP_____________________________*/
+/*___________________________________________________________________________*/
+/*__________________________________LIENS.PHP________________________________*/
+
+h1 #lien {
+	margin-bottom : 35px;
+}
+
+.vignettes {
+	width:399px;
+	height:250px;
+	-moz-border-radius: 15px; 
+    -webkit-border-radius: 15px; 
+    -khtml-border-radius: 15px; 
+    border-radius: 15px; 
+    behavior: url(border-radius.htc);
+	
+	-webkit-box-shadow:  1px 4px 16px #666;
+	-moz-box-shadow: 1px 4px 16px #666;
+	box-shadow: 1px 4px 16px #666;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-property: box-shadow;
+	-webkit-transition-timing-function: ease-ou;
+	-moz-transition-duration: 1s;
+	-moz-transition-property: box-shadow;
+	-moz-transition-timing-function: ease-ou;
+	transition-duration: 1s;
+	transition-property: box-shadow;
+	transition-timing-function: ease-ou;
+}
+
+.vignettes:hover {
+	-webkit-box-shadow:  1px 4px 30px #666;
+	-moz-box-shadow: 1px 4px 30px #666;
+	box-shadow: 1px 4px 30px #666;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-property: box-shadow;
+	-webkit-transition-timing-function: ease-ou;
+	-moz-transition-duration: 1s;
+	-moz-transition-property: box-shadow;
+	-moz-transition-timing-function: ease-ou;
+	transition-duration: 1s;
+	transition-property: box-shadow;
+	transition-timing-function: ease-ou;
+}
+
+.bloc {
+	margin-bottom: 35px;
+}
+
+.liensTexte {
+	float : right;
+	width:300px;
+	margin-top : 10px;
+}
+.liensTexte p {
+float : right;
+	width:300px;
+	text-align:justify;
+}
+
+/*________________________________FIN LIENS.PHP______________________________*/
+/*___________________________________________________________________________*/
+/*____________________________________ADMIN__________________________________*/
+
+#content2 {
+	width: 1080px;
+	margin: 0 auto;
+	border: 1px solid #E7E7E7;
+	background : #FFF;
+}
+
+img.left {
+	margin-left:-15px;
+	margin-top:-30px;
+}
+
+/***Mail***/
+
+th{
+	background : #333;
+	color : #FFF;
+}
+.tblMail{
+	border : 2px black solid;
+	border-collapse: collapse;
+	padding : 5px;
+	color : #333;
+}
+.surligne0 {
+	background-color : #FFF;
+}
+.surligne1 {
+	background-color : #7DC50C;
+}
+
+/***Articles***/
+
+.button {
+	width:30px;
+	height : auto;
+	float:left;
+}
+
+.select_articles {
+	border : 2px solid grey;
+}
+
+.select_articles .title {
+	text-align:center;
+	font-size : 19px;
+}
+
+.select_articles .content {
+	margin-left : 40px;
+}
+
+.select_articles .tright {
+	text-align : right;
+}
+
+/*_________________________________FIN ADMIN.PHP_________________________________*/

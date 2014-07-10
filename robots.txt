@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /cv.php
+Disallow: /a_edit.php
+Disallow: /contact.php
+Disallow: /Tutoriels.php
+Disallow: /a_articles.php
+Disallow: /a_message.php
+Allow: /
+Disallow: /a_index.php
