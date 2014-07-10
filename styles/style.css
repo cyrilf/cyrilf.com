@@ -1,0 +1,288 @@
+﻿body
+{
+	
+	color: black;
+	background-image: url("images/degrade.jpg");
+	text-align :left;
+	font-family: Calibri;
+	height : 100%;
+	width: 100%;
+	margin-left: 0;
+	margin-top : 0;
+	position: relative;
+	
+}
+
+#logoa
+{
+	height : 146px;
+	background-image : url("images/green2.png");
+	background-repeat : repeat;
+	margin : -10px 0 0 -10px;
+}
+
+#logob
+{
+	height : 146px;
+	background-image : url("images/blue2.png");
+	background-repeat : repeat;
+	margin : -10px 0 0 -10px;
+}
+
+#logoc
+{
+	height : 146px;
+	background-image : url("images/red2.png");
+	background-repeat : repeat;
+	margin : -10px 0 0 -10px;
+}
+
+#logod
+{
+	height : 146px;
+	background-image : url("images/purple2.png");
+	background-repeat : repeat;
+	margin : -10px 0 0 -10px;
+}
+
+#menu
+{
+	background-color: black;
+	width : 100%;
+	height : 50px;
+	padding : 0;
+	margin : -1.3% 0 0 0;
+}
+
+
+#menu li
+{
+	float: left;
+	margin : 1.3% -5% 0 17%;
+	list-style-type: none;
+	list-style-position: inside;
+}
+
+#menu a
+{
+	color : white;
+	font-size : 110%;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#menu .a:hover
+{
+	border-bottom: 5px solid rgb(0,200,0);
+}
+
+#menu .b:hover
+{
+	border-bottom: 5px solid rgb(0,0,255);
+}
+
+#menu .c:hover
+{
+	border-bottom: 5px solid rgb(255,0,0);
+}
+
+#menu .d:hover
+{
+	border-bottom: 5px solid rgb(163,73,164);
+}
+
+#imagea
+{
+	width : 36%;
+	height : 68%;
+	float : left;
+	margin : -0.07% 0 0 -0.7%;
+}
+
+#imageb
+{
+	float : left;
+	margin : -10px 0 0 -10px;
+}
+
+#imagec
+{
+	width : 32%;
+	height : 90%;
+	float : left;
+	margin : 0 0 0 -10px;
+}
+
+#imaged
+{
+	width : 36%;
+	height : 100%;
+	float : left;
+	margin : 0 0 0 -10px;
+}
+
+#imagee
+{
+	width : 300px;
+	height : 200px;
+	float : left;
+	margin : 2% 2%;
+}
+
+.texte
+{
+	text-align : justify;
+	font-size : 17px;
+	
+	width : auto;
+	
+
+}
+
+.texte a
+{
+	color : black;
+	font-size : 17px;
+	text-decoration: underlined;
+}
+
+.texte #a
+{
+	border-left : 7px solid rgb(0,200,0);
+	padding : 3% 0 0 6%;
+	margin : 5% 15% 5% 34%;
+}
+
+.texte #bb
+{
+	padding : 3% 0 0 6%;
+	font-size : 15px;
+	margin : 5% 23%;
+}
+
+.texte #b
+{
+	border-left : 7px solid rgb(0,0,255);
+	padding : 3% 0 0 4%;
+	font-size : 15px;
+	margin : 5% 25%;
+}
+
+.texte #c
+{
+	border-left : 7px solid rgb(255,0,0);
+	padding : 3% 0 0 4%;
+	margin : 5% 30%;
+}
+
+.texte #d
+{
+	border-left : 7px solid rgb(163,73,164);
+	padding : 3% 0 0 6%;
+	margin : 5% 15% 5% 34%;
+}
+
+.texte #e
+{
+	border-left : 7px solid rgb(163,73,164);
+	padding : 3% 0 0 6%;
+	margin : 10% 34%;
+}
+
+.download
+{
+	border : 5px solid rgb(255,255,255);
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+.download:hover
+{
+	border : 5px solid rgb(0,0,0);
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+.lettre
+{
+	color : rgb(0,0,255);
+	font-weight : bold;
+	font-size : 200%;
+}
+
+
+.cv
+{
+	color : rgb(0,0,255);
+	width: auto;
+	height : 42px;
+	border-bottom : 3px solid rgb(0,0,255);
+}
+
+p
+{
+	margin-left : 8%;
+}
+
+
+ .obligatoire
+ {
+	color : rgb(163,73,164);
+ }
+ 
+ 
+ 
+#footer
+{
+    bottom: 0;
+	background-color: black;
+	width : 100%;
+	height : auto;
+	color : white;
+	text-align: right;
+	margin : 0;
+    
+}
+
+#footera
+{
+	position: absolute;
+    bottom: 0;
+	background-color: black;
+	width : 100%;
+	height : auto;
+	color : white;
+	text-align: right;
+	position: absolute;
+	bottom: -5%;
+}
+
+#footerd
+{
+	position: absolute;
+    bottom: 0;
+	background-color: black;
+	width : 100%;
+	height : auto;
+	color : white;
+	text-align: right;
+	position: absolute;
+	bottom: 2%;
+}
+
+
+
+
+
+ ::selection 
+ {
+	background: grey;
+}
+
+::-moz-selection 
+{
+	background: grey;
+}

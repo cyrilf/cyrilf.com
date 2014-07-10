@@ -1,0 +1,11 @@
+<?php 
+include("JSCounter/compteur.php");
+print "<STYLE> .ltd1 { color:#000000; font-size:8pt; font-family:Verdana;}</STYLE>
+<table width=\"200\" border=\"0\" >
+<tr class=\"ltd1\"><td colspan=\"2\">Nombre de visiteurs</td></tr> 
+<tr class=\"ltd1\"><td>Actuellement : </td><td align=\"right\">".$compt_c."</td></tr>
+<tr class=\"ltd1\"><td>Aujourdhui : </td><td align=\"right\">".$compt_j."</td></tr>
+<tr class=\"ltd1\"><td>Ce mois : </td><td align=\"right\">".number_format($compt_ms,0,',',' ')."</td></tr>
+<tr class=\"ltd1\"><td>depuis la création : </td><td align=\"right\">".number_format($compteur,0,',',' ')."</td></tr> 
+</table>";
+?>

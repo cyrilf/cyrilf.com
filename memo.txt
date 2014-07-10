@@ -1,0 +1,17 @@
+﻿		Memo
+________________________
+
+X------------------------------------------------------------------- 1/ Finir le captcha.
+x------------------------------------------------------------------- 2/ Supprimer l'entrée 'tel' de la bdd sur hebergratuit.
+x------------------------------------------------------------------- 3/ Finir le système de news.
+3(bis)/ Implementer le système de commentaires
+x------------------------------------------------------------------- 4/ Harmoniser les cnxs à la bdd.
+X------------------------------------------------------------------- 5/ Date dans la bdd.
+6/ Charger le background en dernier.
+x------------------------------------------------------------------- 7/ Probleme d'affichage sur tutoriels.php
+x------------------------------------------------------------------- 8/ Module de déconnexion pour l'admin
+9/ Création de comptes utilisateurs ?
+10/ Réorganisation du fichier css
+11/ Section lien pour neil rosen..
+12/ Page 404
+13 / Refaire contact.php
