@@ -1,0 +1,20 @@
+<span id="url" class="hidden">{$__LANG}/projects</span>
+<a href="home">
+	<img id="logo_cyrilf" src="views/images/logo_cyrilf.png" alt="logo cyrilf" />
+</a>
+<!--<h1><a id="logoTitle" href="home">CYRIL F</a></h1>-->
+<div id="frame">
+	<img src="{$project_picture}" alt="image projet" />
+</div>
+
+<ul id="categories">
+	{loop name="categories_parents"}
+		{if condition="$categ_current == $value.id"}
+			<li id="categories{$value.id}" class="categ selectedCateg"><a href="projects2?categ={$value.id}">{$value.name}</a></li>
+		{else}
+			<li id="categories{$value.id}" class="categ"><a href="projects2?categ={$value.id}">{$value.name}</a></li>
+		{/if}
+	{/loop}
+</ul>
+
+{include="sidebar/details"}

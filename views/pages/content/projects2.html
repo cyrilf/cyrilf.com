@@ -1,0 +1,56 @@
+<!-- Si on a un projet de sélectionné -->
+{if condition="$project_select == true"}
+	<div id="project_container">
+		<div id="project_top">
+			<div class="ribbonGreen">
+				<h2 id="project_title">
+					{$project_current.name}
+				</h2>
+				<div id="g-plusone"><div class="g-plusone" data-annotation="inline" data-width="120" data-href="projects/{$project_current.id}"></div></div>
+				<!--<div id="urlShort">URL<span id="urlShortHidden"> projects/{$project_current.id}</span></div>-->
+			</div>
+			<div class="triangle"></div><div class="clear"></div>
+		</div>
+		<div id="project_content">
+			{$project_current.content}
+		</div>
+		<div id="project_bottom">
+			<span id="project_tags">TAGS \\</span>
+			<span id="project_keywords">
+				{loop="project_current.keywords"}
+					<span class="project_keyword">{$value}</span>
+				{/loop}
+			</span>
+			<span id="project_date">{$project_current.date}</span>
+		</div>
+	</div>
+
+<!-- Sinon on affiche tout les projets -->
+{else}
+	<div id="projects_container">
+		<div class="ribbonGreen"><h2>{$__PROJECTS} (<span class="small">{$categ_current}</span>)</h2></div>
+		<div class="triangle"></div><div class="clear"></div>
+		<div id="projects_list">
+		{loop="projects_current"}
+			<div class="project_element">
+				<div class="project_element_top" style="background-color:{$value.color};">
+					<a href="projects?id={$value.id}">
+						<img src="{$value.thumbnail}" class="project_element_thumb" alt="Project {$value.name}">
+					</a>
+					<span class="overlay">
+						<a href="projects?id={$value.id}">{$value.name}</a>
+					</span>
+				</div>
+				<div class="project_element_bottom">
+					<span class="project_name">
+						<a href="projects?id={$value.id}">{$value.name}</a>
+					</span>
+				</div>
+			</div>
+		{else}
+			Aucun articles ne se trouve dans cette catègorie.
+		{/loop}
+		</div>
+		<div class="clear"></div>
+	<div>
+{/if}

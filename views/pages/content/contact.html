@@ -1,0 +1,21 @@
+<br />
+<br />
+<div class='error {if="$error==false"} hidden {/if}'>
+	{$__ErrorMessage}
+</div>
+<div class='confirm {if="$confirm==false"} hidden {/if}'>
+	{$__ValidMessage}
+</div>
+
+<form id="contactForm" name="contactForm" method="POST" action="{$__LANG}/contact">
+	<div>
+		<h2>{$__Contact}</h2>
+		<p><label for="name">{$__FandLastName}</label><input type="text" name="name" id="name" /></p>
+		<p><label for="email">{$__Email}</label><input type="email" name="email" id="email" /></p>
+		<p><label for="subject">{$__Subject}</label><input type="text" name="subject" id="subject" /></p>
+		<p id="textarea"><label for="message" id="messageLabel">{$__Message}</label><textarea cols="50" rows="9" id="message" name="message" ></textarea></p>
+
+		<p><label for="user_code">{$__RepeatCode} : <span id="captchaSpan" class="bold">{$captcha}</span></label><input type="text" name="user_code" id="user_code" /></p>
+		<input type="submit" name="submit" class="buttonGreen" value="{$__Send}" />
+	</div>
+</form>
