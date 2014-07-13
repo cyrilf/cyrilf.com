@@ -14,15 +14,24 @@
     display: none;
   }
 
-  .nav > li > a {
-    font-size: 23px;
-  }
+  .nav > li {
 
-  .nav > li.active > a,
-  .nav > li.active > a:hover,
-  .nav > li.active > a:focus {
-    background: none;
-    color: @dark;
+    &:hover {
+      background-color: @light;
+      -webkit-transition: background-color .3s;
+      -moz-transition: background-color .3s;
+      transition: background-color .3s;
+    }
+
+    > a {
+      font-size: 23px;
+    }
+
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      color: @dark;
+    }
   }
 }
 
