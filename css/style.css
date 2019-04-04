@@ -63,7 +63,11 @@ li a {
   position: relative;
 }
 
-.button.button-flat {
+.button:hover, .button:hover a {
+  border-bottom-color: rgba(0,0,0,.7);
+}
+
+.button-flat {
   background: transparent;
   border-bottom-color: #abe545;
 }
@@ -77,10 +81,6 @@ li a {
   .button:not(.button-flat) > a {
     display: inline-block;
     transform: skew(30deg);
-  }
-
-  .button:hover, .button:hover a {
-    border-bottom-color: rgba(0,0,0,.7);
   }
 
   .button:hover:after {
