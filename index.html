@@ -1,358 +1,86 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyril F</title>
-  <meta name="description" content="cyrilf is my personnal website. I'm a French web developer - Montréal/Paris">
-  <meta name="keywords" content="Cyril, Francesconi, Cyril F, cyrilf, web developer, Rouen, Montreal, Paris, personal website">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
-  <meta name="google-site-verification" content="KP57BpZEznIYu8Q8mPfLb7GkntURtqD8NyhnKgCBWDo">
+  <meta name="description" content="Hey, I'm cyrilf. A traveler, web developer & nomad. No really, no mad!">
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="css/screen.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,700' rel='stylesheet' type='text/css'>
-  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,700" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-
-  <div class="content header full-width">
-    <h1 class="main-title" data-hover="Cyril&nbsp;Francesconi">Cyril Francesconi</h1>
-    <br>
-    <div class="logo-container">
-      <img src="./img/logo.png" alt="logo" class="logo" />
+  <header>
+    <h1>Cyril Francesconi</h1>
+    <div class="logo-container logo-header">
+      <img src="./img/logo.png" alt="logo" class="logo">
     </div>
-  </div>
-
-  <div class="navbar navbar-default">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" data-toggle="collapse" data-target=".navbar-collapse" href="#">Menu</a>
-    </div>
-    <div class="collapse navbar-collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-nav-centered">
-        <li><a href="#intro-link">Intro</a></li>
-        <li><a href="#projects-link">Projects</a></li>
-        <li><a href="#skills-link">Skills</a></li>
-        <li><a href="#contact-link">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <section class="content full-width" id="intro">
-    <a id="intro-link"></a>
-    <div class="row">
-      <div class="col-md-6 intro-left">
-        <div class="hey">Hey!</div>
-        <br>
-        <div>Nice to see you there!</div>
-        <br>
-        <div>
-          I'm a french web developer.<br>
-          I write code. I solve problems. I learn new things.<br>
-          I think, search and dream.
-        </div>
+  </header>
+  <section class="section-intro">
+    <div class="intro-card">
+      <div class="intro-card-picture">
+        <img src="./img/me.jpg" alt="profile picture">
       </div>
-      <div class="col-md-6 intro-right">
-        <div id="picture-me"></div>
+      <div class="intro-card-text hand-writting">
+        <p>Nice to see you here.</p>
+        <p class="m-0">I'm a web developer.</p>
+        <p class="m-0">I write code. I solve problems. I learn new things.</p>
+        <p class="m-0">I think, search and act.</p>
+        <p class="mt-auto">Cyril</p>
       </div>
     </div>
-    <div class="row">
-      <ul class="who-am-i">
-        <li><a href="//github.com/cyrilf"><span class="glyphicon glyphicon-heart-empty"></span> Web lover</a></li>
-        <li><a href="//music.cyrilf.com"><span class="glyphicon glyphicon-music"></span> Music Addict</a></li>
-        <li><a href="//requiremind.com"><span class="glyphicon glyphicon-pencil"></span> Tech blogger</a></li>
+    <div class="intro-links">
+      <ul>
+        <li class="button"><a href="https://github.com/cyrilf">Web lover</a></li>
+        <li class="button"><a href="https://open.spotify.com/user/cyrilf7">Music addict</a></li>
       </ul>
     </div>
+    <div class="img-plant img-plant-left"></div>
   </section>
-
-  <div class="separator"></div>
-
-  <section class="content full-width" id="projects">
-    <a id="projects-link"></a>
-    <div class="row">
-      <h3 class="section-title light" data-hover="Projects">Projects</h3>
-
-      <ul class="grid" id="project-list">
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="distance">
-              distance
-            </div>
-            <figcaption>
-              <h3>distance</h3>
-              <div>Distance allows you to use your phone as a remote controller for your computer</div>
-              <a href="//github.com/cyrilf/distance">Open</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="ng-chat">
-              ngChat
-            </div>
-            <figcaption>
-              <h3>ngChat</h3>
-              <div>A tiny-chat application with Angular, Socket.io and Node.js</div>
-              <a href="//github.com/cyrilf/ngChat">Open</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="require-mind">
-              &nbsp;
-            </div>
-            <figcaption>
-              <h3>require-mind</h3>
-              <div>Learn. Live. Love. Dev.</div>
-              <a href="//requiremind.com/">Open</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="sneeky">
-              sneeky
-            </div>
-            <figcaption>
-              <h3>sneeky</h3>
-              <div>HTML5 Multiplayer Game. Speed, lights and strategy!</div>
-              <a href="//github.com/cyrilf/sneeky">Open</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="angular-vibrator">
-              ngVibrator
-            </div>
-            <figcaption>
-              <h3>angular-vibrator</h3>
-              <div>Angular wrapper for the vibration API</div>
-              <a href="//angular-vibrator.cyrilf.com/">Try it</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="angular-converter">
-              ngConverter
-            </div>
-            <figcaption>
-              <h3>angular-converter</h3>
-              <div>Converter is an angular app to convert values in different units</div>
-              <a href="//angular-converter.cyrilf.com/">Try it</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="les-mains-vertes">
-              &nbsp;
-            </div>
-            <figcaption>
-              <h3>Les Mains Vertes</h3>
-              <div>Landscaping profesional website</div>
-              <a href="//lesmainsvertes.net/">Open</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="windmill">
-              windmill
-            </div>
-            <figcaption>
-              <h3>windmill</h3>
-              <div>Nine Men's Morris game</div>
-              <a href="//windmill.cyrilf.com/">Play it</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="hidden-code">
-              hiddenCode
-            </div>
-            <figcaption>
-              <h3>hidden-code</h3>
-              <div>Hidden Code allow you to activate an hidden code on your website (ex: the konami one)</div>
-              <a href="//cyrilf.github.io/hidden-code/">Try it</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="laserize">
-              laserize
-            </div>
-            <figcaption>
-              <h3>laserize</h3>
-              <div>Laserize allow you to transform two images into a laser hover effect.</div>
-              <a href="//cyrilf.github.io/laserize/">Try it</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="sublimipsum">
-              sublimipsum
-            </div>
-            <figcaption>
-              <h3>sublimipsum</h3>
-              <div>Sublime Text Plugin - Insert Lorem Ipsum</div>
-              <a href="//github.com/cyrilf/Sublimipsum">Open</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4">
-          <figure>
-            <div id="echomind">
-              echomind
-            </div>
-            <figcaption>
-              <h3>echomind</h3>
-              <div>Take care of the echo</div>
-              <a href="//echomind.cyrilf.com">Listen</a>
-            </figcaption>
-          </figure>
-        </li>
+  <section>
+    <h2>Skills</h2>
+    <small>I've developed through the years</small>
+    <div>
+      <ul class="list-vertical">
+        <li>React / Redux</li>
+        <li>Vue / Vuex</li>
+        <li>Javascript</li>
+        <li>Node.js</li>
       </ul>
+      <small>& SQL, noSQL, git, github, firebase, juggling, flow arts, ukulele, activism...</small>
     </div>
-    <div class="row">
-      <div class="see see-github">
-        <a href="//github.com/cyrilf">View all projects</a>
-      </div>
+    <div class="button button-flat inline-block"><a href="https://linkedin.com/in/cyrilfrancesconi">See my resume</a>
     </div>
+    <div class="img-plant img-plant-right"></div>
   </section>
-
-  <div class="separator"></div>
-
-  <section class="content full-width" id="skills">
-    <a id="skills-link"></a>
-    <div class="row">
-      <h3 class="section-title" data-hover="skills">Skills</h3>
-      <hr class="clear">
-      <ul class="skill-main-list">
-        <li>
-          <img src="img/angular.png" alt="Angular.js">
-          Angular.js
-        </li>
-        <li>
-          <img src="img/node.png" alt="Node.js">
-          Node.js
-        </li>
-        <li>
-          <img src="img/mongodb.png" alt="MongoDb">
-          MongoDB
-        </li>
-      </ul>
-    </div>
-    <div class="row">
-      <div class="col-md-4 intro-left">
-        <ul class="skill-list left">
-          <li>
-            Javascript
-          </li>
-          <li>
-            HTML5
-          </li>
-          <li>
-            LESS
-          </li>
-          <li>
-            Canvas
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 intro-right">
-      <ul class="skill-list center">
-        <li>
-          PHP
-        </li>
-        <li>
-          CSS3
-        </li>
-        <li>
-          Emmet
-        </li>
-        <li>
-          Scrum
-        </li>
-      </ul>
-      </div>
-      <div class="col-md-4 intro-right">
-        <ul class="skill-list right">
-          <li>
-            MySQL
-          </li>
-          <li>
-            jQuery
-          </li>
-          <li>
-            Socket.io
-          </li>
-          <li>
-            REST
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      and more...
-    </div>
-    <div class="row work-information">
-      I'm currently working at <a href="http://evaneos.fr" class="work">Evaneos</a> as a Web developer.<br>
-      Want to know more about me?<br><br>
-      <div class="see see-resume">
-        <a href="http://linkedin.com/in/cyrilfrancesconi">See my resume</a>
-      </div>
-    </div>
+  <section>
+    <h2>Companies</h2>
+    <small>I've worked with</small>
+    <ul class="list-vertical">
+      <li class="button" style="background: #cff09e" data-hover="parking experience & management improved">
+        <a href="http://www.evopark.com">Evopark</a>
+      </li>
+      <li class="button" style="background: #a8dba8" data-hover="tailor-made tours & travel with local travel agents">
+        <a href="https://www.evaneos.co.uk">Evaneos</a>
+      </li>
+      <li class="button" style="background: #79bd9a; color: white;" data-hover="IOT to maximise human experiences">
+        <a href="https://www.reelyactive.com">reelyActive</a>
+      </li>
+      <li class="button" style="background: #3b8686; color: white;" data-hover="e-commerce platform">
+        <a href="https://www.42stores.com">42Stores</a>
+      </li>
+    </ul>
   </section>
-
-  <div class="separator"></div>
-
-  <section class="content full-width" id="contact">
-    <a id="contact-link"></a>
-    <div class="row">
-      <h3 class="section-title dark" data-hover="contact">Contact</h3>
-      <div id="social-links">
-        <a href="http://linkedin.com/in/cyrilfrancesconi"><span class='symbol' title='LinkedIn'>circlelinkedin</span></a>
-        <a href="http://github.com/cyrilf"><span class='symbol' title='Github'>circlegithubalt</span></a>
-        <a href="http://twitter.com/cyrilf_"><span class='symbol' title='Twitter'>circletwitterbird</span></a>
-      </div>
-      <div class="logo-container">
-        <img src="./img/logo.png" alt="logo" class="logo" />
-      </div>
-      <div class="conclusion" data-hover="cyrilf.com">
-        cyrilf.com
-      </div>
-    </div>
+  <section>
+    <h2>Contact</h2>
+    <small>Where you can reach me</small>
+    <ul class="list-vertical">
+      <li class="button button-flat"><a href="https://linkedin.com/in/cyrilfrancesconi">linkedIn</a></li>
+      <li class="button button-flat"><a href="https://github.com/cyrilf">github.com/cyrilf</a></li>
+    </ul>
   </section>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-  <script src="js/vendor/bootstrap.min.js"></script>
-  <script src="js/toucheffects.js"></script>
-  <script src="js/main.js"></script>
-
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-18914788-2', 'cyrilf.com');
-    ga('send', 'pageview');
-  </script>
+  <div class="signature hand-writting">cyrilf</div>
 </body>
 </html>
