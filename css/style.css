@@ -200,6 +200,12 @@ section {
   position: relative;
 }
 
+hr {
+  border: 1px solid #f3efe6;
+  margin: 20px auto;
+  max-width: 350px;
+}
+
 .img-plant {
   display: none;
 }
@@ -349,6 +355,12 @@ section {
 
 .intro-links {
   margin: 40px 0 50px;
+}
+
+.extra-skills {
+  max-width: 700px;
+  display: inline-block;
+  margin: 10px auto 0;
 }
 
 .signature {
