@@ -209,6 +209,13 @@ section {
     display: block;
     position: absolute;
     z-index: 10;
+    opacity: 1;
+    transition: opacity ease-in-out 0.2s;
+  }
+
+  .img-plant:hover,
+  .img-plant:active {
+    opacity: 0.3;
   }
 
   .img-plant-left {
