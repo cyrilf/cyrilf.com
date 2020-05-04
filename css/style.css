@@ -265,7 +265,7 @@ hr {
   flex-direction: column;
   background: white;
   text-align: left;
-  box-shadow: 0 0 13px 0 #353f38;
+  box-shadow: 0 5px 13px 0px rgba(0, 0, 0, 0.3);
   border-radius: 11px;
   overflow: hidden;
   transition: box-shadow 0.2s, transform 0.2s;
@@ -302,7 +302,7 @@ hr {
 }
 
 .intro-card:hover {
-  box-shadow: 0 0 23px 0 #353f38;
+  box-shadow: 0 5px 13px 0px rgba(0, 0, 0, 0.2);
   transform: scale(1.005);
 }
 
