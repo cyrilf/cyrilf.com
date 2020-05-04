@@ -2,4 +2,6 @@
 
 Personal website. 🌱
 
+:zap: Open for any freelance opportunities. Reach me out at hello@cyrilf.com :zap:
+
 ![cyrilf.com](img/screenshot.png)
