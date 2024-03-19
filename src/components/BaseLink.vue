@@ -3,7 +3,12 @@ const { href = "", text = "" } = defineProps<{ href: string; text?: string }>();
 </script>
 
 <template>
-  <a v-if="href || text" :href class="font-bold underline hover:text-lime-500">
+  <a
+    v-if="href || text"
+    :href
+    class="font-bold underline hover:text-lime-500"
+    :target="href.startsWith('https://') ? '_blank' : ''"
+  >
     <slot>
       {{ text }}
     </slot>

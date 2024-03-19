@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed, ref } from "vue";
+import BaseButton from "./BaseButton.vue";
 import BaseTimelineEntry from "./BaseTimelineEntry.vue";
 
 const {
@@ -6,6 +8,11 @@ const {
   subtitle = "I've worked with",
   companies = [],
 } = defineProps<{ title?: string; subtitle?: string; companies?: Company[] }>();
+
+const showOlder = ref(false);
+const toggleShowOlder = () => (showOlder.value = !showOlder.value);
+const latestCompanies = computed(() => companies.slice(0, 3));
+const olderCompanies = computed(() => companies.slice(3, companies.length));
 </script>
 
 <template>
@@ -22,10 +29,34 @@ const {
         </div>
         <div class="col-span-12 md:col-span-8">
           <div
-            class="relative space-y-12 px-4 before:bg-gray-700 md:before:absolute md:before:-left-4 md:before:bottom-0 md:before:top-0 md:before:w-0.5 before:dark:bg-gray-700"
+            class="relative px-4 before:bg-gray-700 md:before:absolute md:before:-left-4 md:before:bottom-0 md:before:top-0 md:before:w-0.5 before:dark:bg-gray-700"
           >
-            <BaseTimelineEntry v-for="company in companies" :id="company.name + company.startDate" :company="company" />
+            <BaseTimelineEntry
+              v-for="company in latestCompanies"
+              :key="company.name + company.startDate"
+              :company="company"
+              class="mt-12"
+            />
+            <div
+              class="grid grid-cols-subgrid"
+              :style="{
+                'grid-template-rows': showOlder ? '1fr' : '0fr',
+                transition: 'grid-template-rows 300ms',
+              }"
+            >
+              <div class="overflow-y-clip" style="grid-row: 1 / span 2">
+                <BaseTimelineEntry
+                  v-for="company in olderCompanies"
+                  :key="company.name + company.startDate"
+                  :company="company"
+                  class="mt-6"
+                />
+              </div>
+            </div>
           </div>
+          <BaseButton @click="toggleShowOlder" class="-ml-4 mt-8">
+            {{ showOlder ? "Hide" : "Show" }} older companies
+          </BaseButton>
         </div>
       </div>
     </div>
