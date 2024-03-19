@@ -1,12 +1,12 @@
 /// <reference types="vite/client" />
 
-type Experience = {
+type SubExperience = {
   name: string;
   date: string;
   description: string;
 };
 
-type Company = {
+type Experience = {
   name: string;
   startDate: string;
   endDate?: string;
@@ -14,5 +14,5 @@ type Company = {
   isActive?: boolean;
   icon?: string;
   link?: string;
-  experiences?: Experience[];
+  subExperiences?: SubExperience[];
 };

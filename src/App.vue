@@ -2,7 +2,7 @@
 import BaseTimeline from "./components/BaseTimeline.vue";
 import BaseLink from "./components/BaseLink.vue";
 
-const companies: Company[] = [
+const experiences: Experience[] = [
   {
     name: "Your company name here?",
     icon: "⚡️",
@@ -17,7 +17,7 @@ const companies: Company[] = [
     startDate: "03/2012",
     endDate: "Present",
     description: "A variety of clients and missions over the years. A still ongoing adventure.",
-    experiences: [
+    subExperiences: [
       {
         name: "Nikita",
         date: "05/2020 - 04/2022",
@@ -153,6 +153,6 @@ const companies: Company[] = [
     </div>
   </div>
   <section class="bg-gray-800 text-gray-100 dark:bg-gray-800 dark:text-gray-100">
-    <BaseTimeline title="Companies" subtitle="I've worked with" :companies="companies" />
+    <BaseTimeline title="Experience" subtitle="Companies I've worked with" :experiences="experiences" />
   </section>
 </template>

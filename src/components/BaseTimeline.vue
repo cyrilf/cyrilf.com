@@ -4,15 +4,15 @@ import BaseButton from "./BaseButton.vue";
 import BaseTimelineEntry from "./BaseTimelineEntry.vue";
 
 const {
-  title = "Companies",
-  subtitle = "I've worked with",
-  companies = [],
-} = defineProps<{ title?: string; subtitle?: string; companies?: Company[] }>();
+  title = "Experiences",
+  subtitle = "I've had",
+  experiences = [],
+} = defineProps<{ title?: string; subtitle?: string; experiences?: Experience[] }>();
 
 const showOlder = ref(false);
 const toggleShowOlder = () => (showOlder.value = !showOlder.value);
-const latestCompanies = computed(() => companies.slice(0, 3));
-const olderCompanies = computed(() => companies.slice(3, companies.length));
+const latestExperiences = computed(() => experiences.slice(0, 3));
+const olderExperiences = computed(() => experiences.slice(3, experiences.length));
 </script>
 
 <template>
@@ -24,7 +24,7 @@ const olderCompanies = computed(() => companies.slice(3, companies.length));
             class="mx-auto mb-14 text-center before:mx-auto before:mb-5 before:block before:h-3 before:w-24 before:rounded-md before:bg-lime-600 md:mx-0 md:w-fit md:text-right md:before:mx-0 before:dark:bg-lime-600"
           >
             <h3 class="text-4xl font-semibold">{{ title }}</h3>
-            <span class="text-sm font-bold italic tracking-wider text-gray-400 dark:text-gray-400">{{ subtitle }}</span>
+            <span class="text-xs font-bold italic tracking-wider text-gray-400 dark:text-gray-400">{{ subtitle }}</span>
           </div>
         </div>
         <div class="col-span-12 md:col-span-8">
@@ -32,9 +32,9 @@ const olderCompanies = computed(() => companies.slice(3, companies.length));
             class="relative px-4 before:bg-gray-700 md:before:absolute md:before:-left-4 md:before:bottom-0 md:before:top-0 md:before:w-0.5 before:dark:bg-gray-700"
           >
             <BaseTimelineEntry
-              v-for="company in latestCompanies"
-              :key="company.name + company.startDate"
-              :company="company"
+              v-for="experience in latestExperiences"
+              :key="experience.name + experience.startDate"
+              :experience="experience"
               class="mt-12"
             />
             <div
@@ -46,16 +46,16 @@ const olderCompanies = computed(() => companies.slice(3, companies.length));
             >
               <div class="overflow-y-clip" style="grid-row: 1 / span 2">
                 <BaseTimelineEntry
-                  v-for="company in olderCompanies"
-                  :key="company.name + company.startDate"
-                  :company="company"
+                  v-for="experience in olderExperiences"
+                  :key="experience.name + experience.startDate"
+                  :experience="experience"
                   class="mt-6"
                 />
               </div>
             </div>
           </div>
           <BaseButton @click="toggleShowOlder" class="-ml-4 mt-8">
-            {{ showOlder ? "Hide" : "Show" }} older companies
+            {{ showOlder ? "Hide" : "Show" }} older experiences
           </BaseButton>
         </div>
       </div>
