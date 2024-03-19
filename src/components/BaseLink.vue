@@ -6,7 +6,7 @@ const { href = "", text = "" } = defineProps<{ href: string; text?: string }>();
   <a
     v-if="href || text"
     :href
-    class="font-bold underline hover:text-lime-500"
+    class="font-bold underline decoration-lime-700 underline-offset-2 hover:text-lime-500"
     :target="href.startsWith('https://') ? '_blank' : ''"
   >
     <slot>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseSection from "./components/BaseSection.vue";
 import BaseTimeline from "./components/BaseTimeline.vue";
 import BaseLink from "./components/BaseLink.vue";
 
@@ -14,6 +15,7 @@ const experiences: Experience[] = [
   {
     name: "CyrilF (freelance)",
     icon: "💻",
+    link: "https://cyrilf.com",
     startDate: "03/2012",
     endDate: "Present",
     description: "A variety of clients and missions over the years. A still ongoing adventure.",
@@ -153,6 +155,8 @@ const experiences: Experience[] = [
     </div>
   </div>
   <section class="bg-gray-800 text-gray-100 dark:bg-gray-800 dark:text-gray-100">
-    <BaseTimeline title="Experience" subtitle="Companies I've worked with" :experiences="experiences" />
+    <BaseSection title="Experience" subtitle="Companies I've worked with" variant="green">
+      <BaseTimeline :experiences="experiences" />
+    </BaseSection>
   </section>
 </template>
