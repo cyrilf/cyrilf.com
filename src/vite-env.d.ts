@@ -16,3 +16,9 @@ type Experience = {
   link?: string;
   subExperiences?: SubExperience[];
 };
+
+type Contact = {
+  name: string;
+  link: string;
+  type: "email" | "github" | "linkedin";
+};

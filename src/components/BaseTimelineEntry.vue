@@ -2,18 +2,13 @@
 import BaseLink from "./BaseLink.vue";
 
 const { experience = null } = defineProps<{ experience: Experience }>();
-const openExperience = (event: MouseEvent, link: string) => {
-  const target = event.ctrlKey || event.metaKey ? "_blank" : "_self";
-  window.open(link, target);
-};
 </script>
 
 <template>
   <div
     v-if="experience"
     class="group relative -ml-[2.9rem] before:absolute before:-top-2 before:h-12 before:w-8 before:rounded-full before:bg-gray-800 before:dark:bg-gray-800"
-    :class="{ 'before:bg-lime-600 before:dark:bg-lime-600': experience.isActive, 'cursor-pointer': experience.link }"
-    @click.prevent="(e) => experience?.link && openExperience(e, experience.link)"
+    :class="{ 'before:bg-lime-600 before:dark:bg-lime-600': experience.isActive }"
   >
     <div class="flex gap-4">
       <div class="z-10 ml-1 text-xl group-hover:grayscale-0" :class="{ grayscale: !experience.isActive }">
@@ -21,9 +16,7 @@ const openExperience = (event: MouseEvent, link: string) => {
       </div>
       <div>
         <h3 class="text-xl font-semibold tracking-wide">
-          <BaseLink v-if="experience.link" :href="experience.link" class="group-hover:text-lime-600">{{
-            experience.name
-          }}</BaseLink>
+          <BaseLink v-if="experience.link" :href="experience.link">{{ experience.name }}</BaseLink>
           <span v-else>{{ experience.name }}</span>
         </h3>
         <div class="flex items-center gap-1 text-xs tracking-wide text-gray-400 dark:text-gray-400">
