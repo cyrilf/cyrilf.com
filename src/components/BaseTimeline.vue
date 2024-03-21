@@ -23,10 +23,9 @@ const olderExperiences = computed(() => experiences.slice(3, experiences.length)
         :class="{ 'mt-12': index > 0 }"
       />
       <div
-        class="grid grid-cols-subgrid"
+        class="grid grid-cols-subgrid transition-all duration-500 motion-reduce:transition-none"
         :style="{
           'grid-template-rows': showOlder ? '1fr' : '0fr',
-          transition: 'grid-template-rows 300ms',
         }"
       >
         <div class="overflow-y-clip" style="grid-row: 1 / span 2">

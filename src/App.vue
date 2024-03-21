@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BaseLink from "./components/BaseLink.vue";
 import BaseSection from "./components/BaseSection.vue";
+import BaseIntro from "./components/BaseIntro.vue";
 import BaseTimeline from "./components/BaseTimeline.vue";
 import BaseContact from "./components/BaseContact.vue";
 
@@ -109,63 +109,22 @@ const experiences: Experience[] = [
 </script>
 
 <template>
-  <nav class="mx-auto mt-10 flex w-full max-w-4xl items-center justify-center px-4 py-6 md:px-12 lg:px-48">
-    <div>
-      <h1 class="font-roboto-mono text-5xl">Cyril Francesconi</h1>
-    </div>
-    <div></div>
-  </nav>
-  <div class="mx-auto mt-12 max-w-6xl">
-    <div class="hover:shadow-lg md:grid-cols-none lg:grid lg:grid-cols-5 lg:bg-white">
-      <div
-        class="relative m-auto my-20 max-w-md rounded-xl bg-white px-10 py-10 shadow-xl md:rounded-xl md:shadow-xl lg:col-span-3 lg:mb-10 lg:mt-10 lg:w-full lg:max-w-lg lg:rounded-none lg:px-5 lg:pb-5 lg:pt-5 lg:shadow-none"
-      >
-        <img src="./assets/logo.png" alt="CyrilF Logo" class="absolute -top-20 h-24" />
-        <img
-          class="mt-2 h-64 rounded-lg object-center shadow-2xl sm:h-52 sm:w-full sm:object-cover lg:hidden"
-          src="./assets/cyrilf-profile.jpg"
-          alt="A picture portrait of cyrilf"
-        />
-        <div class="mt-12 text-lg font-bold lg:mt-7">Hello, I'm Cyril. A freelance Web Developer.</div>
-        <div class="pt-2 text-justify text-lg text-gray-600">
-          <p>I write code, I solve problems, I learn new things.</p>
-          <p class="inline-flex items-center">
-            Open-source and web lover, find most of my contributions at
-            <span class="icon-[ph--github-logo] ml-2 text-4xl" />
-            <BaseLink href="https://github.com/cyrilf">github.com/cyrilf</BaseLink>.
-          </p>
-          <p>
-            Also, happy creator/contributor of <span class="icon-[ph--plant-fill] mx-1" /><BaseLink
-              href="https://luseeds.com"
-              >luseeds.com</BaseLink
-            >
-            and <span class="icon-[ph--circle] mx-1" /><BaseLink href="https://anoano.page">anoano.page</BaseLink>.
-          </p>
-        </div>
-        <button class="mt-5 rounded-xl bg-gray-600 p-3 font-bold text-white shadow-2xl hover:bg-gray-800">
-          START STUDYING
-        </button>
+  <div
+    class="bg-gray-100 bg-gradient-to-br from-gray-50 from-15% via-emerald-50 via-30% to-gray-50 to-55% dark:bg-gray-700 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700"
+  >
+    <nav class="mx-auto flex w-full max-w-4xl items-center justify-center px-4 py-12 pt-20 md:px-12 lg:px-48">
+      <div>
+        <h1 class="text-center font-roboto-mono text-5xl text-green-700 dark:text-[hsl(82_60_53/1)]">
+          Cyril Francesconi
+        </h1>
       </div>
-
-      <div class="relative hidden lg:col-span-2 lg:block">
-        <img
-          class="absolute inset-0 h-full w-full object-cover object-center"
-          src="./assets/cyrilf-bw.jpg"
-          alt="A picture portrait of cyrilf"
-        />
-      </div>
-    </div>
-    <div class="mx-auto my-12 w-fit">
-      <span class="text-gray-800"
-        >⚡️ Open for any remote freelance opportunities. Reach me out at
-        <BaseLink href="mailto:hello@cyrilf.com">hello@cyrilf.com</BaseLink>⚡️</span
-      >
-    </div>
+    </nav>
+    <BaseIntro />
+    <BaseSection title="Experience" subtitle="Companies I've worked with" variant="green">
+      <BaseTimeline :experiences="experiences" />
+    </BaseSection>
+    <BaseSection title="Contact" subtitle="How to reach me" variant="stone">
+      <BaseContact />
+    </BaseSection>
   </div>
-  <BaseSection title="Experience" subtitle="Companies I've worked with" variant="green">
-    <BaseTimeline :experiences="experiences" />
-  </BaseSection>
-  <BaseSection title="Contact" subtitle="How to reach me" variant="stone">
-    <BaseContact />
-  </BaseSection>
 </template>

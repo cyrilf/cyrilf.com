@@ -10,8 +10,8 @@ const VARIANTS = {
   },
   stone: {
     blob: "before:bg-stone-500 before:dark:bg-stone-500",
-    background: "bg-gray-200 dark:bg-gray-200",
-    text: "text-gray-700  dark:text-gray-700",
+    background: "bg-gray-200 dark:bg-gray-900",
+    text: "text-gray-700  dark:text-gray-300",
   },
 };
 
@@ -28,7 +28,7 @@ const sectionColor = computed(() => `${activeVariant.value.background} ${activeV
 </script>
 
 <template>
-  <section :class="sectionColor">
+  <section class="py-24" :class="sectionColor">
     <div class="container mx-auto max-w-5xl px-8 py-16">
       <div class="grid grid-cols-12 gap-4 sm:mx-8">
         <div class="col-span-12 md:col-span-4">
