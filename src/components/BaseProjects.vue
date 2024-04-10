@@ -6,7 +6,7 @@ const { projects = [] } = defineProps<{ projects?: Project[] }>();
 
 <template>
   <div>
-    <div>
+    <div class="md:text-lg">
       Here you can find a short list of the various side-projects I've worked on. If you want to see the full
       collection, go to
       <BaseLink

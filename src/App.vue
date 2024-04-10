@@ -133,26 +133,35 @@ const experiences: Experience[] = [
 
 <template>
   <div
-    class="bg-gray-100 bg-gradient-to-br from-gray-50 from-15% via-teal-50 via-30% to-gray-50 to-55% selection:bg-teal-600 selection:text-white dark:bg-gray-700 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700"
+    class="bg-gray-100 bg-gradient-to-br from-gray-50 from-15% via-teal-50 via-30% to-gray-50 to-55% dark:bg-gray-700 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700"
   >
     <nav class="mx-auto flex w-full max-w-4xl items-center justify-center px-4 py-12 pt-20 md:px-12 lg:px-48">
       <div>
-        <h1 class="text-center font-roboto-mono text-5xl text-teal-900 dark:text-gray-300">
+        <h1
+          class="text-center font-roboto-mono text-5xl text-teal-900 selection:bg-emerald-400 selection:text-white dark:text-gray-300"
+        >
           <a href="https://cyrilf.com">Cyril Francesconi</a>
         </h1>
       </div>
     </nav>
-    <BaseIntro />
-    <BaseSection title="Projects" subtitle="Experiments & creations" variant="projects">
+    <BaseIntro class="selection:bg-emerald-400 selection:text-white" />
+    <BaseSection title="Projects" subtitle="Experiments & creations" variant="projects" class="selection:bg-amber-500">
       <BaseProjects :projects="projects" />
     </BaseSection>
-    <BaseSection title="Experience" subtitle="Companies I've worked with" variant="experience">
+    <BaseSection
+      title="Experience"
+      subtitle="Companies I've worked with"
+      variant="experience"
+      class="selection:bg-sky-500"
+    >
       <BaseTimeline :experiences="experiences" />
     </BaseSection>
-    <BaseSection title="Contact" subtitle="How to reach me" variant="contact">
+    <BaseSection title="Contact" subtitle="How to reach me" variant="contact" class="selection:bg-stone-500">
       <BaseContact />
     </BaseSection>
-    <footer class="bg-gray-700 p-8 text-center text-gray-100 dark:text-gray-200">
+    <footer
+      class="bg-gray-700 p-8 text-center text-gray-100 selection:bg-emerald-400 selection:text-white dark:text-gray-200"
+    >
       <BaseLink href="https://cyrilf.com">cyrilf.com</BaseLink> -
       <BaseLink href="https://github.com/cyrilf/cyrilf.com"
         >source available on Github <span class="icon-[ph--github-logo] ml-2"></span

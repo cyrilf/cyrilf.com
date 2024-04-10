@@ -25,8 +25,9 @@ const isLogoFixed = ref(false);
           <img
             class="mx-auto rounded-lg object-cover object-top md:max-h-full lg:col-start-2 lg:mr-0 lg:mt-0 lg:h-full lg:rounded-none dark:brightness-75"
             src="../assets/cyrilf-bw.webp"
+            srcset="../assets/cyrilf-bw.webp 544w, ../assets/cyrilf-bw-xs.webp 315w"
+            sizes="(max-width: 600px) 315px, 544px"
             alt="A picture portrait of cyrilf"
-            rel="preload"
             width="544px"
             height="400px"
           />
@@ -49,9 +50,6 @@ const isLogoFixed = ref(false);
                 and <BaseLink href="https://anoano.page" icon="icon-[ph--circle]" variant="chip">anoano.page</BaseLink>
               </li>
             </ul>
-            <!-- <button class="mt-5 rounded-xl bg-gray-600 p-3 font-bold text-white shadow-2xl hover:bg-gray-800">
-          START STUDYING
-        </button> -->
           </div>
         </div>
       </div>
