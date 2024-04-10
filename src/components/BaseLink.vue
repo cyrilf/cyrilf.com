@@ -16,7 +16,7 @@ const {
     v-if="href || text"
     :href
     :class="{
-      'inline-flex items-center font-bold underline decoration-lime-700 underline-offset-4 hover:text-lime-500':
+      'inline-flex items-center font-bold underline decoration-lime-700 underline-offset-4 hover:text-lime-600':
         variant === DEFAULT_VARIANT,
       'inline-flex items-center rounded-md border bg-stone-100 px-1 pr-2 font-bold  hover:text-lime-600 dark:border-stone-600 dark:bg-gray-900':
         variant === 'chip',

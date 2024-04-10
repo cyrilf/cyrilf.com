@@ -31,7 +31,7 @@ const isLogoFixed = ref(false);
             height="400px"
           />
           <div class="flex flex-col justify-center p-2 sm:p-0 lg:col-start-1 lg:row-start-1 lg:p-12">
-            <div class="my-8 text-lg font-bold md:mt-8 dark:text-lime-500">
+            <div class="my-8 text-lg font-bold md:mt-8 dark:text-green-500">
               Hello, I'm Cyril.<br />
               A freelance Web Developer.
             </div>

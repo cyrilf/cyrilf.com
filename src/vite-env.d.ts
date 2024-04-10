@@ -17,6 +17,13 @@ type Experience = {
   subExperiences?: SubExperience[];
 };
 
+type Project = {
+  name: string;
+  image: string;
+  description: string;
+  link: string;
+};
+
 type Contact = {
   name: string;
   link: string;

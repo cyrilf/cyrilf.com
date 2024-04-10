@@ -12,6 +12,7 @@ declare module 'vue' {
     BaseContactItem: typeof import('./src/components/BaseContactItem.vue')['default']
     BaseIntro: typeof import('./src/components/BaseIntro.vue')['default']
     BaseLink: typeof import('./src/components/BaseLink.vue')['default']
+    BaseProjects: typeof import('./src/components/BaseProjects.vue')['default']
     BaseSection: typeof import('./src/components/BaseSection.vue')['default']
     BaseTimeline: typeof import('./src/components/BaseTimeline.vue')['default']
     BaseTimelineEntry: typeof import('./src/components/BaseTimelineEntry.vue')['default']

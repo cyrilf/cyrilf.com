@@ -1,8 +1,31 @@
 <script setup lang="ts">
 import BaseSection from "./components/BaseSection.vue";
 import BaseIntro from "./components/BaseIntro.vue";
+import BaseProjects from "./components/BaseProjects.vue";
 import BaseTimeline from "./components/BaseTimeline.vue";
 import BaseContact from "./components/BaseContact.vue";
+import BaseLink from "./components/BaseLink.vue";
+
+const projects: Project[] = [
+  {
+    name: "Luseeds",
+    image: "/src/assets/luseeds.png",
+    description: "Collection of projects to make you discover and question a subject",
+    link: "https://luseeds.com",
+  },
+  {
+    name: "Anoano",
+    image: "/src/assets/anoano.png",
+    description: "A website about masculine contraception",
+    link: "https://anoano.page",
+  },
+  {
+    name: "Microbios",
+    image: "/src/assets/microbios.png",
+    description: "A collection of cellular automata experiments in Typescript",
+    link: "https://microbios.cyrilf.com",
+  },
+];
 
 const experiences: Experience[] = [
   {
@@ -29,7 +52,7 @@ const experiences: Experience[] = [
       {
         name: "Péli-Mélo",
         date: "07/2020 - 08/2020",
-        description: "mobile app about photo-collage creation",
+        description: "mobile app on photo-collage creation",
       },
       {
         name: "Hoopop",
@@ -110,21 +133,30 @@ const experiences: Experience[] = [
 
 <template>
   <div
-    class="bg-gray-100 bg-gradient-to-br from-gray-50 from-15% via-emerald-50 via-30% to-gray-50 to-55% selection:bg-lime-600 selection:text-white dark:bg-gray-700 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700"
+    class="bg-gray-100 bg-gradient-to-br from-gray-50 from-15% via-teal-50 via-30% to-gray-50 to-55% selection:bg-teal-600 selection:text-white dark:bg-gray-700 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700"
   >
     <nav class="mx-auto flex w-full max-w-4xl items-center justify-center px-4 py-12 pt-20 md:px-12 lg:px-48">
       <div>
-        <h1 class="text-center font-roboto-mono text-5xl text-green-700 dark:text-[hsl(82_60_53/1)]">
+        <h1 class="text-center font-roboto-mono text-5xl text-teal-900 dark:text-gray-300">
           <a href="https://cyrilf.com">Cyril Francesconi</a>
         </h1>
       </div>
     </nav>
     <BaseIntro />
-    <BaseSection title="Experience" subtitle="Companies I've worked with" variant="green">
+    <BaseSection title="Projects" subtitle="Experiments & creations" variant="projects">
+      <BaseProjects :projects="projects" />
+    </BaseSection>
+    <BaseSection title="Experience" subtitle="Companies I've worked with" variant="experience">
       <BaseTimeline :experiences="experiences" />
     </BaseSection>
-    <BaseSection title="Contact" subtitle="How to reach me" variant="stone">
+    <BaseSection title="Contact" subtitle="How to reach me" variant="contact">
       <BaseContact />
     </BaseSection>
+    <footer class="bg-gray-700 p-8 text-center text-gray-100 dark:text-gray-200">
+      <BaseLink href="https://cyrilf.com">cyrilf.com</BaseLink> -
+      <BaseLink href="https://github.com/cyrilf/cyrilf.com"
+        >source available on Github <span class="icon-[ph--github-logo] ml-2"></span
+      ></BaseLink>
+    </footer>
   </div>
 </template>
