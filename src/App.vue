@@ -6,22 +6,27 @@ import BaseTimeline from "./components/BaseTimeline.vue";
 import BaseContact from "./components/BaseContact.vue";
 import BaseLink from "./components/BaseLink.vue";
 
+import luseedsLogo from "./assets/luseeds.png";
+import anoanoLogo from "./assets/anoano.png";
+import microbiosLogo from "./assets/microbios.png";
+import BaseLeaf from "./components/BaseLeaf.vue";
+
 const projects: Project[] = [
   {
     name: "Luseeds",
-    image: "/src/assets/luseeds.png",
+    image: luseedsLogo,
     description: "Collection of projects to make you discover and question a subject",
     link: "https://luseeds.com",
   },
   {
     name: "Anoano",
-    image: "/src/assets/anoano.png",
+    image: anoanoLogo,
     description: "A website about masculine contraception",
     link: "https://anoano.page",
   },
   {
     name: "Microbios",
-    image: "/src/assets/microbios.png",
+    image: microbiosLogo,
     description: "A collection of cellular automata experiments in Typescript",
     link: "https://microbios.cyrilf.com",
   },
@@ -135,16 +140,21 @@ const experiences: Experience[] = [
   <div
     class="bg-gray-100 bg-gradient-to-br from-gray-50 from-15% via-teal-50 via-30% to-gray-50 to-55% dark:bg-gray-700 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700"
   >
+    <BaseLeaf leaf="left" />
     <nav class="mx-auto flex w-full max-w-4xl items-center justify-center px-4 py-12 pt-20 md:px-12 lg:px-48">
       <div>
         <h1
           class="text-center font-roboto-mono text-5xl text-teal-900 selection:bg-emerald-400 selection:text-white dark:text-gray-300"
+          style="animation: 1s ease-in-out 0s 1 fadeIn forwards"
         >
           <a href="https://cyrilf.com">Cyril Francesconi</a>
         </h1>
       </div>
     </nav>
-    <BaseIntro class="selection:bg-emerald-400 selection:text-white" />
+    <BaseIntro
+      class="opacity-0 selection:bg-emerald-400 selection:text-white"
+      style="animation: 1s ease-in-out 0.3s 1 fadeIn forwards"
+    />
     <BaseSection title="Projects" subtitle="Experiments & creations" variant="projects" class="selection:bg-amber-500">
       <BaseProjects :projects="projects" />
     </BaseSection>

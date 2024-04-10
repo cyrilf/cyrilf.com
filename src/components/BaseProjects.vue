@@ -20,7 +20,7 @@ const { projects = [] } = defineProps<{ projects?: Project[] }>();
         v-for="project in projects"
         :key="project.name"
         :href="project.link"
-        class="group rounded-md bg-gray-50 p-4 text-gray-900 no-underline shadow-md transition-shadow hover:shadow-xl dark:bg-gray-700 dark:text-gray-200"
+        class="group max-w-xs rounded-md bg-gray-50 p-4 text-gray-900 no-underline shadow-md transition-shadow hover:shadow-xl dark:bg-gray-700 dark:text-gray-200"
       >
         <div>
           <img
