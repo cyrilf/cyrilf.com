@@ -6,7 +6,14 @@ import BaseTimelineEntry from "./BaseTimelineEntry.vue";
 const { experiences = [] } = defineProps<{ experiences?: Experience[] }>();
 
 const showOlder = ref(false);
-const toggleShowOlder = () => (showOlder.value = !showOlder.value);
+const showOlderAnimated = ref(false);
+const toggleShowOlder = () => {
+  showOlder.value = !showOlder.value;
+  // If setting it to true, immediate change, otherwise, timeout. Used by the animation
+  showOlder.value
+    ? (showOlderAnimated.value = !showOlderAnimated.value)
+    : setTimeout(() => (showOlderAnimated.value = !showOlderAnimated.value), 1000);
+};
 const latestExperiences = computed(() => experiences.slice(0, 3));
 const olderExperiences = computed(() => experiences.slice(3, experiences.length));
 </script>
@@ -28,7 +35,7 @@ const olderExperiences = computed(() => experiences.slice(3, experiences.length)
           'grid-template-rows': showOlder ? '1fr' : '0fr',
         }"
       >
-        <div class="overflow-y-clip" style="grid-row: 1 / span 2">
+        <div v-if="showOlderAnimated" class="overflow-y-clip" style="grid-row: 1 / span 2">
           <BaseTimelineEntry
             v-for="experience in olderExperiences"
             :key="experience.name + experience.startDate"

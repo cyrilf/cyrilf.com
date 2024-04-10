@@ -110,12 +110,12 @@ const experiences: Experience[] = [
 
 <template>
   <div
-    class="bg-gray-100 bg-gradient-to-br from-gray-50 from-15% via-emerald-50 via-30% to-gray-50 to-55% dark:bg-gray-700 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700"
+    class="bg-gray-100 bg-gradient-to-br from-gray-50 from-15% via-emerald-50 via-30% to-gray-50 to-55% selection:bg-lime-600 selection:text-white dark:bg-gray-700 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700"
   >
     <nav class="mx-auto flex w-full max-w-4xl items-center justify-center px-4 py-12 pt-20 md:px-12 lg:px-48">
       <div>
         <h1 class="text-center font-roboto-mono text-5xl text-green-700 dark:text-[hsl(82_60_53/1)]">
-          Cyril Francesconi
+          <a href="https://cyrilf.com">Cyril Francesconi</a>
         </h1>
       </div>
     </nav>
