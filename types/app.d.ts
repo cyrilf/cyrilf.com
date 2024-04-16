@@ -1,12 +1,10 @@
-/// <reference types="vite/client" />
-
-type SubExperience = {
+declare type SubExperience = {
   name: string;
   date: string;
   description: string;
 };
 
-type Experience = {
+declare type Experience = {
   name: string;
   startDate: string;
   endDate?: string;
@@ -17,14 +15,14 @@ type Experience = {
   subExperiences?: SubExperience[];
 };
 
-type Project = {
+declare type Project = {
   name: string;
   image: string;
   description: string;
   link: string;
 };
 
-type Contact = {
+declare type Contact = {
   name: string;
   link: string;
   type: "email" | "github" | "linkedin";

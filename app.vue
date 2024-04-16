@@ -1,15 +1,41 @@
 <script setup lang="ts">
-import BaseSection from "./components/BaseSection.vue";
-import BaseIntro from "./components/BaseIntro.vue";
-import BaseProjects from "./components/BaseProjects.vue";
-import BaseTimeline from "./components/BaseTimeline.vue";
-import BaseContact from "./components/BaseContact.vue";
-import BaseLink from "./components/BaseLink.vue";
+import luseedsLogo from "~/assets/luseeds.png";
+import anoanoLogo from "~/assets/anoano.png";
+import microbiosLogo from "~/assets/microbios.png";
+import cyrilfPicture from "~/assets/cyrilf-bw.webp";
 
-import luseedsLogo from "./assets/luseeds.png";
-import anoanoLogo from "./assets/anoano.png";
-import microbiosLogo from "./assets/microbios.png";
-import BaseLeaf from "./components/BaseLeaf.vue";
+import "~/assets/css/style.css";
+
+useHead({
+  title: "Cyril F",
+  meta: [
+    { name: "description", content: "Hey, I'm cyrilf. Welcome to my personal website. I'm a freelance web-developer." },
+    { name: "lang", content: "en" },
+  ],
+  htmlAttrs: { lang: "en" },
+  link: [
+    { rel: "icon", href: "/favicon.ico" },
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap",
+      crossorigin: "",
+      fetchpriority: "high",
+    },
+  ],
+});
+
+useSeoMeta({
+  ogTitle: "Cyril F",
+  ogDescription: "Hey, I'm cyrilf. Welcome to my personal website. I'm a freelance web-developer.",
+  ogImage: cyrilfPicture,
+  ogUrl: "https://cyrilf.com",
+  twitterTitle: "Cyril F",
+  twitterDescription: "Hey, I'm cyrilf. Welcome to my personal website. I'm a freelance web-developer.",
+  twitterImage: cyrilfPicture,
+  twitterCard: "summary",
+});
 
 const projects: Project[] = [
   {

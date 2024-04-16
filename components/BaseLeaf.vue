@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import leafLeft from "../assets/leaf-left.webp";
-import leafLeft2 from "../assets/leaf-left2.webp";
-import leafRight from "../assets/leaf-right.webp";
+import leafLeft from "~/assets/leaf-left.webp";
+import leafLeft2 from "~/assets/leaf-left2.webp";
+import leafRight from "~/assets/leaf-right.webp";
 
 const leaves = {
   left: {
