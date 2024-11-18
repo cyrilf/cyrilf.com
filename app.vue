@@ -178,7 +178,7 @@ const experiences: Experience[] = [
       </div>
     </nav>
     <BaseIntro
-      class="opacity-0 selection:bg-emerald-400 selection:text-white"
+      class="opacity-5 selection:bg-emerald-400 selection:text-white"
       style="animation: 1s ease-in-out 0.3s 1 fadeIn forwards"
     />
     <BaseSection title="Projects" subtitle="Experiments & creations" variant="projects" class="selection:bg-amber-500">
