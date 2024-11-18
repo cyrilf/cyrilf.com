@@ -33,7 +33,7 @@ const isLogoFixed = ref(false);
           />
           <div class="flex flex-col justify-center p-2 sm:p-0 lg:col-start-1 lg:row-start-1 lg:p-12">
             <div class="my-8 text-lg font-bold md:mt-8 dark:text-green-500">
-              Hello, I'm Cyril.<br />
+              Hey, I'm Cyril.<br />
               A freelance Web Developer.
             </div>
             <ul class="ml-4 list-[circle] space-y-4 text-lg">
@@ -57,7 +57,7 @@ const isLogoFixed = ref(false);
     <div class="mx-auto my-12 w-fit px-2 text-center">
       <span class="text-gray-800 dark:text-gray-300"
         >⚡️ Open for any remote freelance opportunities. Reach me out at
-        <BaseLink href="mailto:hello@cyrilf.com">hello@cyrilf.com</BaseLink>⚡️</span
+        <BaseLink href="mailto:hey@cyrilf.com">hey@cyrilf.com</BaseLink>⚡️</span
       >
     </div>
   </section>

@@ -5,7 +5,7 @@ const CONTACTS: Contact[] = [
   {
     name: "Email",
     type: "email",
-    link: "mailto:hello@cyrilf.com",
+    link: "mailto:hey@cyrilf.com",
   },
   { name: "Github", type: "github", link: "https://github.com/cyrilf" },
   {
